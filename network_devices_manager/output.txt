@@ -1,0 +1,5 @@
+starting
+shown
+CLOSING
+shutting down
+Exiting normally...
