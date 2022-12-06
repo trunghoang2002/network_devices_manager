@@ -474,7 +474,6 @@ public class gui_javafx extends Application {
         Datacollector.initialise=true;
         Datacollector.pause=false;
         
-        
         repeatfunctions tt= new repeatfunctions();
         
         scheduler.scheduleWithFixedDelay(tt, delay, interval,TimeUnit.SECONDS);
@@ -490,7 +489,6 @@ public class gui_javafx extends Application {
             pst.println("Error in gui_javafx.start_data_collection()");
             exp.printStackTrace(pst);
         }
-        
     }
     
 	public static void shutdown_data_collection(){

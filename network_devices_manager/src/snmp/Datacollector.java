@@ -41,8 +41,8 @@ class Record{
     static String oid_interface_dscr="1.3.6.1.2.1.2.2.1.2.";
     static String oid_basic_inoctetes = "1.3.6.1.2.1.2.2.1.10."; //so octet nhan tren interface
     static String oid_basic_outoctetes = "1.3.6.1.2.1.2.2.1.16."; // so octet gui qua interface
-    static String oid_HCInoctetes = " 1.3.6.1.2.1.31.1.1.1.6."; // phien ban 64 bit cua ifinoctet
-    static String oid_HCOutoctetes = " 1.3.6.1.2.1.31.1.1.1.10."; // phien ban 64 bit cua ifoutoctet
+    static String oid_HCInoctetes = "1.3.6.1.2.1.31.1.1.1.6."; // phien ban 64 bit cua ifinoctet
+    static String oid_HCOutoctetes = "1.3.6.1.2.1.31.1.1.1.10."; // phien ban 64 bit cua ifoutoctet
     
     //This is the constructor used when creating a record
     Record(String ip,String port,String community) throws IOException{
@@ -284,13 +284,8 @@ public class Datacollector {
         else{
             loop=(size_record_queue-start)+end;
         }
-        
-
-
         //System.out.println("start="+start+" end="+end+" loopsize="+loop);
         for(Integer p:used_slots_list){
-            
-            
            // System.out.println("for Port = "+p);
                                  
             for(j=0,i=start+1;j<loop;i++,j++){
@@ -299,62 +294,54 @@ public class Datacollector {
                 {
                     continue;
                 }
-            
-            //System.out.println("subtracting "+(i%size_record_queue)+" from "+((i-1)%size_record_queue));
-            long delta_inoctets=(data[p][i%size_record_queue].inoctets-data[p][(i-1)%size_record_queue].inoctets);
-            long delta_outoctets=(data[p][i%size_record_queue].outoctets-data[p][(i-1)%size_record_queue].outoctets);
-            
-            
-            
-            
-            long ifspeed = data[p][i%size_record_queue].speed;
-            long time_difference=(data[p][i%size_record_queue].date.getTime()-data[p][(i-1)%size_record_queue].date.getTime());
-            long delta_seconds = TimeUnit.MILLISECONDS.toSeconds(time_difference);
-            
-            if(delta_seconds<update_freq){
-                delta_seconds=update_freq;
+                
+              //System.out.println("subtracting "+(i%size_record_queue)+" from "+((i-1)%size_record_queue));
+                long delta_inoctets=(data[p][i%size_record_queue].inoctets-data[p][(i-1)%size_record_queue].inoctets);
+                long delta_outoctets=(data[p][i%size_record_queue].outoctets-data[p][(i-1)%size_record_queue].outoctets);
+                
+                long ifspeed = data[p][i%size_record_queue].speed;
+                long time_difference=(data[p][i%size_record_queue].date.getTime()-data[p][(i-1)%size_record_queue].date.getTime());
+                long delta_seconds = TimeUnit.MILLISECONDS.toSeconds(time_difference);
+                
+                if(delta_seconds<update_freq){
+                    delta_seconds=update_freq;
+                }
+                
+                //System.out.println("delta inoctets= "+delta_inoctets+" delta_outoctets "+delta_outoctets);
+                //System.out.println("delta_seconds= "+delta_seconds);
+                
+                data[p][i%size_record_queue].data_in_mb=((double)delta_inoctets)/(1024*1024); 
+                data[p][i%size_record_queue].data_out_mb=((double)delta_outoctets)/(1024*1024);
+                data[p][i%size_record_queue].data_datarate_in_mbps=(data[p][i%size_record_queue].data_in_mb/(double)delta_seconds)*8;
+                data[p][i%size_record_queue].data_datarate_out_mbps=(data[p][i%size_record_queue].data_out_mb/(double)delta_seconds)*8;
+                
+                //System.out.println("data_in_mb "+data[p][i%size_record_queue].data_in_mb+"data_out_mb "+data[p][i%size_record_queue].data_out_mb);
+                
+                double in_num=(double)delta_inoctets*8*100;
+                double in_denom=(double)delta_seconds*ifspeed;
+                double inbw=in_num/in_denom;
+                
+                double out_num=(double)delta_outoctets*8*100;
+                double out_denom=(double)delta_seconds*ifspeed;
+                double outbw=out_num/out_denom;
+                
+                inbw= Math.floor(inbw * 100000) / 100000;
+                outbw= Math.floor(outbw * 100000) / 100000;
+                
+                data[p][i%size_record_queue].in_bw=inbw;
+                data[p][i%size_record_queue].out_bw=outbw;
+                
+                //leave counter wraps
+                if(delta_inoctets>=0&&delta_outoctets>=0){
+                    data_collected.add(data[p][i%size_record_queue]);
+                }
+                
+                current_inbw=inbw;
+                current_outbw=outbw;
+                
+                //System.out.println("inbw = "+inbw+" outbw = "+outbw);
+                //System.out.printf("inbw = %.4f  outbw = %.4f \n",inbw,outbw);
             }
-            
-            //System.out.println("delta inoctets= "+delta_inoctets+" delta_outoctets "+delta_outoctets);
-            //System.out.println("delta_seconds= "+delta_seconds);
-            
-            data[p][i%size_record_queue].data_in_mb=((double)delta_inoctets)/(1024*1024); 
-            data[p][i%size_record_queue].data_out_mb=((double)delta_outoctets)/(1024*1024);
-            data[p][i%size_record_queue].data_datarate_in_mbps=(data[p][i%size_record_queue].data_in_mb/(double)delta_seconds)*8;
-            data[p][i%size_record_queue].data_datarate_out_mbps=(data[p][i%size_record_queue].data_out_mb/(double)delta_seconds)*8;
-            
-            //System.out.println("data_in_mb "+data[p][i%size_record_queue].data_in_mb+"data_out_mb "+data[p][i%size_record_queue].data_out_mb);
-            
-            double in_num=(double)delta_inoctets*8*100;
-            double in_denom=(double)delta_seconds*ifspeed;
-            double inbw=in_num/in_denom;
-            
-            double out_num=(double)delta_outoctets*8*100;
-            double out_denom=(double)delta_seconds*ifspeed;
-            double outbw=out_num/out_denom;
-            
-            inbw= Math.floor(inbw * 100000) / 100000;
-            outbw= Math.floor(outbw * 100000) / 100000;
-            
-            
-            data[p][i%size_record_queue].in_bw=inbw;
-            data[p][i%size_record_queue].out_bw=outbw;
-            
-            //leave counter wraps
-            if(delta_inoctets>=0&&delta_outoctets>=0){
-                data_collected.add(data[p][i%size_record_queue]);
-            }
-            
-            
-            current_inbw=inbw;
-            current_outbw=outbw;
-            
-            
-            //System.out.println("inbw = "+inbw+" outbw = "+outbw);
-            //System.out.printf("inbw = %.4f  outbw = %.4f \n",inbw,outbw);
-        }
-    
-            
         }
             //current_data.add(data);
             //list_index++;

@@ -15,7 +15,7 @@ import org.snmp4j.smi.UnsignedInteger32;
 import org.snmp4j.smi.VariableBinding;
 import org.snmp4j.transport.DefaultUdpTransportMapping;
 
-public class SnmpTrapSendDemo {
+public class SnmpTrapSender {
 
 	public static final int DEFAULT_VERSION = SnmpConstants.version2c;
 	public static final long DEFAULT_TIMEOUT = 3 * 1000L;
@@ -73,7 +73,7 @@ public class SnmpTrapSendDemo {
 	 */
 	public static void main(String[] args) {
 		try {
-			SnmpTrapSendDemo demo = new SnmpTrapSendDemo();
+			SnmpTrapSender demo = new SnmpTrapSender();
 			demo.init();
 			demo.sendPDU();
 		} catch (IOException e) {

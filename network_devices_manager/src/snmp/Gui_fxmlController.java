@@ -1,6 +1,6 @@
 package snmp;
 
-import java.awt.image.RescaleOp;
+import java.awt.MenuItem;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -31,6 +31,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuBar;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.Tab;
@@ -41,6 +42,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Tooltip;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.effect.BlurType;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.effect.Effect;
 import javafx.scene.image.Image;
@@ -65,13 +67,7 @@ import javafx.util.Duration;
 import javafx.util.StringConverter;
 import org.snmp4j.PDU;
 import static snmp.Datacollector.add;
-
-import snmp.commands.Ping;
-import snmp.commands.SnmpGet;
-import snmp.commands.SnmpGetBulk;
-import snmp.commands.SnmpGetNext;
-import snmp.commands.SnmpWalk;
-
+import snmp.commands.*;
 import static snmp.database.places_truncation;
 import static snmp.database.truncate;
 
@@ -79,7 +75,7 @@ import static snmp.database.truncate;
 public class Gui_fxmlController {
 
 
-//<editor-fold defaultstate="collapsed" desc="FXML Components">
+	//<editor-fold defaultstate="collapsed" desc="FXML Components">
     @FXML
     private ComboBox<String> combobox_speed;
     @FXML
@@ -346,7 +342,6 @@ public class Gui_fxmlController {
     
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
-    	System.out.println("init");
         assert graph_x_time_axis != null : "fx:id=\"graph_x_time_axis\" was not injected: check your FXML file 'gui_fxml.fxml'.";
         assert graph_y_number_axis != null : "fx:id=\"graph_y_number_axis\" was not injected: check your FXML file 'gui_fxml.fxml'.";
         assert monitor_right_pane != null : "fx:id=\"monitor_right_pane\" was not injected: check your FXML file 'gui_fxml.fxml'.";
@@ -356,7 +351,7 @@ public class Gui_fxmlController {
         assert splitpane_monitor != null : "fx:id=\"splitpane_monitor\" was not injected: check your FXML file 'gui_fxml.fxml'.";
         assert tab_pane != null : "fx:id=\"tab_pane\" was not injected: check your FXML file 'gui_fxml.fxml'.";
         assert graph != null : "fx:id=\"graph\" was not injected: check your FXML file 'gui_fxml.fxml'.";
-        
+
         create_btn_minimise();
         initialise_tab();
         
@@ -365,7 +360,6 @@ public class Gui_fxmlController {
         creategraph();
         create_graph_units_menu();
         make_grid();
-        start_recording();
         
         // tab status
         creategraph1();
@@ -397,6 +391,8 @@ public class Gui_fxmlController {
         // tab snmp commands
         create_btn_snmpgo();
         create_combobox_snmp_command();
+        
+        start_recording();
     }
     
     public void create_btn_minimise(){
@@ -1165,7 +1161,6 @@ public class Gui_fxmlController {
         img_device_off.setFitHeight(75);
         img_device_off.setFitWidth(75);
         
-        
         ImageView icon;
         if(device.getDevice_status().equals("up")){
             icon = img_device_on;
@@ -1640,7 +1635,7 @@ public class Gui_fxmlController {
                 int port = d.getPort();
                 String community=d.getCommunity();
                 System.out.println("Adding for monitoring"+ip_from_devices+":"+port+" where community = "+community);
-                add(ip_from_devices, port,community);
+                Datacollector.add(ip_from_devices, port,community);
             }
             gui_javafx.start_data_collection();
             
@@ -1834,23 +1829,24 @@ public class Gui_fxmlController {
             graph_out_speed=(out_speed_copy/1024)*unit_convertor;
             
             double[] pos = splitpane_monitor.getDividerPositions();
-                int size_of_x_axis =8;
-                
-                if(pos[0]<0.4){size_of_x_axis=15;}
-                if(pos[0]<0.2){size_of_x_axis=20;}
-                
-                out_series.getData().add(new XYChart.Data(date, graph_out_speed));
-                if(out_series.getData().size()>size_of_x_axis){
-                    while(out_series.getData().size()!=size_of_x_axis){
-                    out_series.getData().remove(0);
-                    }
+            
+            int size_of_x_axis =8;
+            
+            if(pos[0]<0.4){size_of_x_axis=15;}
+            if(pos[0]<0.2){size_of_x_axis=20;}
+            
+            out_series.getData().add(new XYChart.Data(date, graph_out_speed));
+            if(out_series.getData().size()>size_of_x_axis){
+                while(out_series.getData().size()!=size_of_x_axis){
+                out_series.getData().remove(0);
                 }
-                inp_series.getData().add(new XYChart.Data(date, graph_in_speed));
-                if(inp_series.getData().size()>size_of_x_axis){
-                    while(inp_series.getData().size()!=size_of_x_axis){
-                    inp_series.getData().remove(0);
-                    }
+            }
+            inp_series.getData().add(new XYChart.Data(date, graph_in_speed));
+            if(inp_series.getData().size()>size_of_x_axis){
+                while(inp_series.getData().size()!=size_of_x_axis){
+                inp_series.getData().remove(0);
                 }
+            }
             
             String units_in="Kbps",units_out="Kbps";
             if(in_speed<1){
