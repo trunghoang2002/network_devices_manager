@@ -2,6 +2,7 @@ package snmp;
 
 import java.io.IOException;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 
 import org.snmp4j.PDU;
 
@@ -24,15 +25,16 @@ public class utilities {
 //        }
         System.out.println("CPU usage: " + df.format(getCPUusage(ip, community)) + " %");
         System.out.println("RAM usage: " + df.format(getRAMusage(ip, community)) + " GB");
-        getStogareInfo(ip, community);
+//        getStogareInfo(ip, community);
     }
     
-    public static void getStogareInfo(String ip, String community) {
+    public static ArrayList<String[]> getStogareInfo(String ip, String community) {
         String[] OID_hrStorage = {"1.3.6.1.2.1.25.2.3.1.3", // hrStorageDescr
                                   "1.3.6.1.2.1.25.2.3.1.4", // hrStorageAllocationUnits
                                   "1.3.6.1.2.1.25.2.3.1.5", // hrStorageSize
                                   "1.3.6.1.2.1.25.2.3.1.6"}; // hrStorageUsed
         String[] oid = OID_hrStorage.clone();
+        ArrayList<String[]> rs = new ArrayList<String[]>();
         DecimalFormat df = new DecimalFormat("#.###");
         System.out.println("Storage: ");
         try {
@@ -52,11 +54,12 @@ public class utilities {
                 PDU pdu3 = SnmpGetNext.snmpGetNext(ip, community, oid[3]);
                 Double Total_used = Double.parseDouble(SnmpGetNext.getPDUStringvalue(pdu3)) * Allocationunit / (1024*1024*1024);
                 oid[3] = SnmpGetNext.getOIDNextValue(pdu3);
-                System.out.println(SnmpGetNext.getPDUStringvalue(pdu0) + "; Total size: " + df.format(Total_size) + " GB, Total used: " + df.format(Total_used) + " GB");
+                rs.add(new String[] { SnmpGetNext.getPDUStringvalue(pdu0), "Total size: " + df.format(Total_size) + " GB", "Total used: " + df.format(Total_used) + " GB" });
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return rs;
     }
     
     public static Double getCPUusage(String ip, String community) {

@@ -1,6 +1,5 @@
 package snmp;
 
-import java.awt.MenuItem;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -31,7 +30,6 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
-import javafx.scene.control.MenuBar;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.Tab;
@@ -42,7 +40,6 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Tooltip;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.effect.BlurType;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.effect.Effect;
 import javafx.scene.image.Image;
@@ -232,6 +229,13 @@ public class Gui_fxmlController {
     
     @FXML
     private Label lbl_inbw;
+    
+    @FXML
+    private Label cpu_value;
+    @FXML
+    private Label ram_value;
+    @FXML
+    private TextArea stogare_value;
     
     @FXML
     private ComboBox<String> combobox_ports;
@@ -954,6 +958,11 @@ public class Gui_fxmlController {
 				table_status_selected_ip = d.getIp();
 				updategraph1(d.getIp(), d.getCommunity());
 				animation1.play();
+				ArrayList<String[]> sto = utilities.getStogareInfo(d.getIp(), d.getCommunity());
+				stogare_value.clear();
+				for (String[] i : sto) {
+					stogare_value.appendText(i[0] + "\n " + i[1] + ", " + i[2] + "\n ");
+				}
 			}
 		});
     }
@@ -1910,18 +1919,21 @@ public class Gui_fxmlController {
             if(pos[0]<0.4){size_of_x_axis=15;}
             if(pos[0]<0.2){size_of_x_axis=20;}
             
-                out_series1.getData().add(new XYChart.Data(date, CPU_usage));
-                if(out_series1.getData().size()>size_of_x_axis){
-                    while(out_series1.getData().size()!=size_of_x_axis){
-                    out_series1.getData().remove(0);
-                    }
+            cpu_value.setText(Math.round(CPU_usage) + " %");
+            ram_value.setText(Math.round(RAM_usage) + " %");
+
+            out_series1.getData().add(new XYChart.Data(date, CPU_usage));
+            if(out_series1.getData().size()>size_of_x_axis){
+                while(out_series1.getData().size()!=size_of_x_axis){
+                out_series1.getData().remove(0);
                 }
-                inp_series1.getData().add(new XYChart.Data(date, RAM_usage));
-                if(inp_series1.getData().size()>size_of_x_axis){
-                    while(inp_series1.getData().size()!=size_of_x_axis){
-                    inp_series1.getData().remove(0);
-                    }
+            }
+            inp_series1.getData().add(new XYChart.Data(date, RAM_usage));
+            if(inp_series1.getData().size()>size_of_x_axis){
+                while(inp_series1.getData().size()!=size_of_x_axis){
+                inp_series1.getData().remove(0);
                 }
+            }
         }
         ));
         animation1.setCycleCount(Animation.INDEFINITE);
