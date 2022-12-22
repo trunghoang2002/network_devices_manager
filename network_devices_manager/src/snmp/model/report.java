@@ -1,4 +1,4 @@
-package snmp;
+package snmp.model;
 
 import com.itextpdf.text.BaseColor;
 import com.itextpdf.text.Document;
@@ -17,7 +17,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 import javafx.collections.ObservableList;
-import snmp.model.*;
 
 public class report{
 public static String filename;
