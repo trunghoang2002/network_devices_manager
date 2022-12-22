@@ -1,4 +1,4 @@
-package snmp;
+package snmp.commands;
 
 import java.io.IOException;
 import java.text.DecimalFormat;
