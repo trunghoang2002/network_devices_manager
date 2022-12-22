@@ -208,7 +208,7 @@ public class gui_javafx extends Application {
         });
         
         Scene s = new Scene(grid, 340, 480);
-        s.getStylesheets().add(gui_javafx.class.getResource("initial_setup.css").toExternalForm());
+        s.getStylesheets().add(gui_javafx.class.getResource("gui/initial_setup.css").toExternalForm());
         stg.setScene(s);
         stg.show();
         System.out.println("shown");
@@ -232,7 +232,7 @@ public class gui_javafx extends Application {
         grid.setPadding(new Insets(25, 5, 25, 5));
 
         Scene s = new Scene(grid, 340, 280);
-        s.getStylesheets().add(gui_javafx.class.getResource("initial_setup.css").toExternalForm());
+        s.getStylesheets().add(gui_javafx.class.getResource("gui/initial_setup.css").toExternalForm());
 
         Text scenetitle = new Text("Please wait");
         scenetitle.setFont(Font.font("Tahoma", FontWeight.BOLD, 28));
@@ -272,8 +272,8 @@ public class gui_javafx extends Application {
 
     public void open_main_app(Stage stage) throws Exception{
     	try{
-    		System.out.println(getClass().getResource("gui_fxml.fxml"));
-            Parent root = FXMLLoader.load(getClass().getResource("gui_fxml.fxml"));
+    		System.out.println(getClass().getResource("gui/gui_fxml.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("gui/gui_fxml.fxml"));
                                 
             Scene scene = new Scene(root, 1200, 750);//width,height
             stage.setTitle("Network Devices Manager");
