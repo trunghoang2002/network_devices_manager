@@ -67,6 +67,7 @@ import static snmp.Datacollector.add;
 import snmp.commands.*;
 import static snmp.database.places_truncation;
 import static snmp.database.truncate;
+import snmp.model.*;
 
 
 public class Gui_fxmlController {

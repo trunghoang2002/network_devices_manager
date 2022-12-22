@@ -4,6 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import snmp.model.*;
 
 
 public class database {
@@ -35,7 +36,7 @@ public class database {
     }
     
     //for data coming from database
-    static int places_truncation = 3;
+    public static int places_truncation = 3;
     
     //after how many days should the records be deleted
     static int delete_freq=gui_javafx.db_del_freq_days;

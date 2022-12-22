@@ -1,4 +1,4 @@
-package snmp;
+package snmp.model;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

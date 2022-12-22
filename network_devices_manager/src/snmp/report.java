@@ -7,16 +7,17 @@ import com.itextpdf.text.Element;
 import com.itextpdf.text.Font;
 import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Paragraph;
-import com.itextpdf.text.pdf.PdfContentByte;
+//import com.itextpdf.text.pdf.PdfContentByte;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
-import com.itextpdf.text.pdf.draw.LineSeparator;
+//import com.itextpdf.text.pdf.draw.LineSeparator;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 import javafx.collections.ObservableList;
+import snmp.model.*;
 
 public class report{
 public static String filename;
@@ -153,7 +154,7 @@ public static void generate_report(File filelocation){
             title_sub.setSpacingAfter(10f);
             //document.add(title);
             
-            LineSeparator ls = new LineSeparator();
+//            LineSeparator ls = new LineSeparator();
             //document.add(new Chunk(ls));
             
             document.add(title_sub);

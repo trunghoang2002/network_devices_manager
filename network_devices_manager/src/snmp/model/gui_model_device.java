@@ -1,4 +1,4 @@
-package snmp;
+package snmp.model;
 
 import java.io.IOException;
 import java.util.logging.Level;

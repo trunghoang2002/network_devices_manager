@@ -1,17 +1,12 @@
-package snmp;
+package snmp.model;
 import java.text.DecimalFormat;
 import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import static snmp.database.truncate;
+import snmp.database;
 
-/**
- * Model class for a Person.
- *
- * @author Marco Jakob
- */
 public class gui_model_record {
 
     public SimpleStringProperty ip;
@@ -31,16 +26,8 @@ public class gui_model_record {
     
 
     public static ObservableList<gui_model_record> recordData = FXCollections.observableArrayList();
-  
-    /**
-     * Constructor with some initial data.
-     * 
-     * @param firstName
-     * @param lastName
-     */
     
-    
-    gui_model_record(String ip,String user_dscr,String snmp_dscr,double inbw,double outbw,
+    public gui_model_record(String ip,String user_dscr,String snmp_dscr,double inbw,double outbw,
             double datain,double dataout,double speed,double indatarate,double outdatarate)
     {
         DecimalFormat df = new DecimalFormat("#");
