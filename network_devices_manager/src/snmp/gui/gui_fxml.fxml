@@ -26,7 +26,7 @@
                <children>
                   <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/icon.png" />
+                        <Image url="@../images/icon.png" />
                      </image>
                   </ImageView>
                   <Label alignment="CENTER" prefHeight="83.0" prefWidth="1423.0" text="Network Devices Manager" textAlignment="CENTER" textFill="#fff8f8">
