@@ -1,7 +1,11 @@
 package snmp.commands;
 
+import static snmp.Datacollector.hex2decimal;
+
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.snmp4j.CommunityTarget;
 import org.snmp4j.PDU;
@@ -11,11 +15,14 @@ import org.snmp4j.event.ResponseEvent;
 import org.snmp4j.mp.SnmpConstants;
 import org.snmp4j.smi.Address;
 import org.snmp4j.smi.GenericAddress;
+import org.snmp4j.smi.Integer32;
 import org.snmp4j.smi.Null;
 import org.snmp4j.smi.OID;
 import org.snmp4j.smi.OctetString;
 import org.snmp4j.smi.VariableBinding;
 import org.snmp4j.transport.DefaultUdpTransportMapping;
+
+import snmp.Gui_fxmlController;
 
 public class SnmpWalk {
 
@@ -105,6 +112,78 @@ public class SnmpWalk {
 		}
         return res;
 	}
+	
+	public static ArrayList<String> snmpWalk1(String ip, String community, String targetOid) {
+		ArrayList<String> result = new ArrayList<String>();
+		CommunityTarget target = SnmpUtil.createDefault(ip, community);
+		TransportMapping transport = null;
+		Snmp snmp = null;
+		try {
+			transport = new DefaultUdpTransportMapping();
+			snmp = new Snmp(transport);
+			transport.listen();
+
+			PDU pdu = new PDU();
+			OID targetOID = new OID(targetOid);
+			pdu.add(new VariableBinding(targetOID));
+
+			boolean finished = false;
+			while (!finished) {
+				VariableBinding vb = null;
+				ResponseEvent respEvent = snmp.getNext(pdu, target);
+
+				PDU response = respEvent.getResponse();
+
+				if (null == response) {
+					Gui_fxmlController.create_dialog("No Response from SNMP AGENT");
+                    System.out.println("responsePDU == null");
+					finished = true;
+					break;
+				} else {
+					vb = response.get(0);
+				}
+				// check finish
+				finished = checkWalkFinished(targetOID, pdu, vb);
+				if (!finished) {
+					//System.out.println("==== walk each vlaue :");
+					String value = vb.getVariable().toString();
+					Pattern pattern =Pattern.compile("[0-9a-fA-f][0-9a-fA-f]:[0-9a-fA-f][0-9a-fA-f]");
+                    Matcher matcher = pattern.matcher(value);
+                    
+                   if(matcher.find()){
+                        String hexresponse = value;
+                        String newhexstring = hexresponse.replaceAll(":"," ");
+                        String str[]=newhexstring.split(" ");
+                        String description="";
+                        for(String s:str){
+                                int num = hex2decimal(s);
+                                description += (char)num;
+                            }
+                        value=description;
+                    }
+                    result.add(value);
+					// Set up the variable binding for the next entry.
+					pdu.setRequestID(new Integer32(0));
+					pdu.set(0, vb);
+				} else {
+					//System.out.println("SNMP walk OID has finished.");
+					snmp.close();
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("SNMP walk Exception: " + e);
+		} finally {
+			if (snmp != null) {
+				try {
+					snmp.close();
+				} catch (IOException ex1) {
+					snmp = null;
+				}
+			}
+		}
+        return result;
+	}
 
 	/**
 	 * 1)responsePDU == null<br>
@@ -148,7 +227,6 @@ public class SnmpWalk {
 		    finished = true;
 		}
 		return finished;
-
 	}
 
 	/**

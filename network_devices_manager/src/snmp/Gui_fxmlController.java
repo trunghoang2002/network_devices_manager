@@ -1073,13 +1073,15 @@ public class Gui_fxmlController {
             }
             String community = txt_device_community.getText();
             if(community.equals("")){community="public";}
-            interfaces = snmp.commands.Walk_command.snmpWalk(ip1, community, oid);
+//            interfaces = snmp.commands.Walk_command.snmpWalk(ip1, community, oid);
+            interfaces = SnmpWalk.snmpWalk1(ip1, community, oid);
             System.out.println("");
             //combobox_interfaces.getSelectionModel().selectFirst();
             combobox_interfaces.getItems().setAll(interfaces);
             combobox_interfaces.setOpacity(1);
             oid=Record.oid_IFindexes;
-            indexes = snmp.commands.Walk_command.snmpWalk(ip1, community, oid);
+//            indexes = snmp.commands.Walk_command.snmpWalk(ip1, community, oid);
+            indexes = SnmpWalk.snmpWalk1(ip1, community, oid);
         });
    } 
     
