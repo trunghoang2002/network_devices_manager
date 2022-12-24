@@ -263,6 +263,7 @@ public class database {
      return dates;
     }
 
+    // insert into table record
     public static void insert_data(String data[][]){
      try {
          create_connection();
@@ -461,9 +462,9 @@ public class database {
                 tens *= 10;
             }
             
-            double mult     = (num*tens);
+            double mult = (num*tens);
             mult = Math.round(mult);
-            double result  =  mult/tens;
+            double result = mult/tens;
             return result;
     }
     
@@ -505,7 +506,7 @@ public class database {
      return output;
     }
     
-public static ArrayList<gui_model_device_status> get_device_status_data(String sql){
+    public static ArrayList<gui_model_device_status> get_device_status_data(String sql){
         
         ArrayList<gui_model_device_status> output= new ArrayList<>();
         

@@ -1,6 +1,7 @@
 package snmp;
  
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -9,6 +10,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.snmp4j.PDU;
+
+import snmp.Record;
 import snmp.commands.SnmpGet;
 import static snmp.commands.SnmpGet.NULL_DATA_RECIEVED;
 
@@ -206,8 +209,6 @@ public class Datacollector {
             }
     }
     
-
-    
     //send to gui
     public static ArrayList<Record> get_current_recordings(){
         System.out.println("sending arraylist of size"+data_collected_copy_for_gui.size());
@@ -270,9 +271,6 @@ public class Datacollector {
         }
         
     }
-    
-    
-    
     
     public static void calc_bandwidth(Record data[][],int start,int end){
         int i,j;
@@ -414,75 +412,117 @@ public class Datacollector {
     static ScheduledExecutorService scheduler;
     
 	public static void main(String[] args) throws IOException {
-                //snmp.process.process("ping 127.0.0.1",true);
-                System.out.println("new circular array based implementation");
-//                Timer timer = new Timer();
-                
-                //list_index=0;
-                
-                // regular interval at which the task will be performed 100000000
-                int interval = update_freq;
-                
-                //after how many seconds it will start
-                int delay = 0;
-                
-                initialise_mapping();
-                
-                add("127.0.0.1",7,"public");
-                add("127.0.0.1",36,"public");
-                add("127.0.0.1",37,"public");
-                add("127.0.0.1",39,"public");
-                add("127.0.0.1",41,"public");
-                add("127.0.0.1",42,"public");
-                add("127.0.0.1",43,"public");
-                add("127.0.0.1",44,"public");
-                add("127.0.0.1",46,"public");
-                add("127.0.0.1",47,"public");
-                
-                
-                
-                repeatfunctions tt= new repeatfunctions();
-                scheduler = Executors.newScheduledThreadPool(1);
-                scheduler.scheduleWithFixedDelay(tt, delay, interval, TimeUnit.SECONDS);
+		//snmp.process.process("ping 127.0.0.1",true);
+        System.out.println("new circular array based implementation");
+//        Timer timer = new Timer();
+        
+        //list_index=0;
+        
+        // regular interval at which the task will be performed 100000000
+        int interval = update_freq;
+        
+        //after how many seconds it will start
+        int delay = 0;
+        
+        initialise_mapping();
+        
+        add("127.0.0.1",7,"public");
+        add("127.0.0.1",36,"public");
+        add("127.0.0.1",37,"public");
+        add("127.0.0.1",39,"public");
+        add("127.0.0.1",41,"public");
+        add("127.0.0.1",42,"public");
+        add("127.0.0.1",43,"public");
+        add("127.0.0.1",44,"public");
+        add("127.0.0.1",46,"public");
+        add("127.0.0.1",47,"public");
+        
+        
+        
+        repeatfunctions tt= new repeatfunctions();
+        scheduler = Executors.newScheduledThreadPool(1);
+        scheduler.scheduleWithFixedDelay(tt, delay, interval, TimeUnit.SECONDS);
                 
 	}
-        
-        static int time_sec=0;
-        
-        //incast it goes beyong range of int
-        static int timewrap=2147483647-(2147483647%(update_freq*3));
-        
-        static boolean initialise=true;
-        static boolean pause=false;
-        static Boolean initialise_in_octets_type=true;
+
+	static int time_sec=0;
     
-        public static void initialise_data_collection(){
-            try{
-                if(initialise){
-                        startindex=0;
-                        endindex=-1;
-                        initialise_mapping();
-                        tmp_recordings = new Record[no_of_slots][size_record_queue];
-                        System.out.println("Table created");
-                        initialise=false;
-                    }
-            }
-            catch (Exception ex) {
-                            gui_javafx.pst.println("Error in Initialising Datacollector.repeatfunction()");
-                            ex.printStackTrace(gui_javafx.pst);
-            }
+    //incast it goes beyong range of int
+    static int timewrap=2147483647-(2147483647%(update_freq*3));
+    
+    static boolean initialise=true;
+    static boolean pause=false;
+    static Boolean initialise_in_octets_type=true;
+
+    public static void initialise_data_collection(){
+    	try{
+            if(initialise){
+                    startindex=0;
+                    endindex=-1;
+                    initialise_mapping();
+                    tmp_recordings = new Record[no_of_slots][size_record_queue];
+                    System.out.println("Table created");
+                    initialise=false;
+                }
         }
-        
-        public static class repeatfunctions implements Runnable{
+        catch (Exception ex) {
+                        gui_javafx.pst.println("Error in Initialising Datacollector.repeatfunction()");
+                        ex.printStackTrace(gui_javafx.pst);
+        }
+    }
     
-                    
-            long startInoctets =0;
-            long prevInoctets =0;
-            long prevOutoctets =0;
- 
+    public static String[][] prepare_data(ArrayList<Record> data){
+    	//MySql date time datatype format
+    	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    	//temporary buffer for storing the data which is to be written to database
+    	String database_data[][];
+        int no_of_records=data.size();
+        database_data=new String[no_of_records][9];
+        int index=0;
+        for(Record r:data){
+            database_data[index][0]=r.ip;
+            
+            database_data[index][1]=r.port;
+            
+            database_data[index][2]=sdf.format(r.date);
+            
+            Double inbw = r.in_bw;
+            Double rounded_inbw= Math.floor(inbw * 10000000) / 10000000;
+            database_data[index][3]=rounded_inbw.toString();
+            
+            Double outbw = r.out_bw;
+            Double rounded_outbw= Math.floor(outbw * 10000000) / 10000000;
+            database_data[index][4]=rounded_outbw.toString();
+            
+            Double datain = r.data_in_mb;
+            Double rounded_datain= Math.floor(datain * 10000000) / 10000000;
+            database_data[index][5]=rounded_datain.toString();
+            
+            Double dataout = r.data_out_mb;
+            Double rounded_dataout= Math.floor(dataout * 10000000) / 10000000;
+            database_data[index][6]=rounded_dataout.toString();
+            
+            Double dataratein = r.data_datarate_in_mbps;
+            Double rounded_dataratein= Math.floor(dataratein * 10000000) / 10000000;
+            database_data[index][7]=rounded_dataratein.toString();
+            
+            Double datarateout = r.data_datarate_out_mbps;
+            Double rounded_datarateout= Math.floor(datarateout * 10000000) / 10000000;
+            database_data[index][8]=rounded_datarateout.toString();
+            
+            index++;
+        }
+        return database_data;
+    }
+    
+    public static class repeatfunctions implements Runnable{
+
+    	long startInoctets =0;
+        long prevInoctets =0;
+        long prevOutoctets =0;
         public void run() {
-        try {
-                System.out.println("Inside repeat function");
+        	try {
+            	System.out.println("Inside repeat function");
                 if(initialise_in_octets_type){
                     if(!used_slots_list.isEmpty())
                     {   
@@ -498,7 +538,6 @@ public class Datacollector {
 
                     }
                 }
-
                 if(!pause){
                     try{
                         Iterator<Integer> iter = used_slots_list.iterator();
@@ -536,31 +575,11 @@ public class Datacollector {
 
                     }
                 }
-                    //so that we collect data only according to frequency specified    
+
+                //so that we collect data only according to frequency specified    
                 if( time_sec%(update_freq*calc_freq*data_store_freq)==0&&time_sec!=0 ){
-                    
                     try{
-                        
-                        data_processor.show_raw_data(data_collected);
-
-                        try{
-                            data_processor.prepare_data(data_collected);
-                        }
-                        catch (Exception ex) {
-                            gui_javafx.pst.println("Error in preparing data for database Datacollector.repeatfunction()");
-                            ex.printStackTrace(gui_javafx.pst);
-                        }
-
-                        String data[][] = null;
-                        try{
-                            data=data_processor.get_database_data();
-                        }
-                        catch (Exception ex) {
-                            gui_javafx.pst.println("Error in preparing data for database Datacollector.repeatfunction()");
-                            ex.printStackTrace(gui_javafx.pst);
-                        }
-                        data_processor.show_processed_data();
-
+                        String data[][] = prepare_data(data_collected);
                         try{
                             if(data==null){
                                 System.out.println("NO DATA ( NULL )TO BE INSERTED IN DATABASE");
@@ -573,10 +592,8 @@ public class Datacollector {
                             gui_javafx.pst.println("Error in inserting data to database Database.insert_data() in Datacollector.repeatfunction()");
                             ex.printStackTrace(gui_javafx.pst);
                         }
-                    
                         //clear the temporary list
                         data_collected.clear();
-                    
                     }
                     catch (Exception ex) {
                         gui_javafx.pst.println("Error in sending data to database Datacollector.repeatfunction()");
@@ -584,19 +601,15 @@ public class Datacollector {
                     }
 
                 }
-                
                 //update time
                 time_sec+=update_freq;  
                 if(time_sec>(timewrap)){
                    time_sec=2147483647%update_freq;
                 }
-
-            } 
-            catch (Exception ex) {
-                gui_javafx.pst.println("Error in Data collecting and processing Datacollector.repeatfunction()");
+            } catch (Exception ex) {
+            	gui_javafx.pst.println("Error in Data collecting and processing Datacollector.repeatfunction()");
                 ex.printStackTrace(gui_javafx.pst);
             }
         }
     }
-
 }
