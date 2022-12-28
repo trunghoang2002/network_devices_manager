@@ -468,9 +468,9 @@ public class database {
             return result;
     }
     
-    public static ArrayList<gui_model_device> get_device_data(String sql){
+    public static ArrayList<gui_model_interface> get_device_data(String sql){
         
-        ArrayList<gui_model_device> output= new ArrayList<>();
+        ArrayList<gui_model_interface> output= new ArrayList<>();
         
         try {
             
@@ -487,7 +487,7 @@ public class database {
                String community = rs.getString("community");
                String user_description = rs.getString("user_description");
                String snmp_dscr = rs.getString("snmp_description");
-               gui_model_device d=new gui_model_device(ip, port, community,user_description);
+               gui_model_interface d=new gui_model_interface(ip, port, community,user_description);
                output.add(d);
             }
 
@@ -538,7 +538,7 @@ public class database {
      return output;
     }
     
-    public static void add_device(gui_model_device d){
+    public static void add_device(gui_model_interface d){
         try {
             create_connection();
             stmt = conn.createStatement();
@@ -596,7 +596,7 @@ public class database {
         }
     }
     
-    public static void remove_device(gui_model_device d){
+    public static void remove_device(gui_model_interface d){
         
         try {
             

@@ -431,13 +431,13 @@
                               </Label>
                               <TableView fx:id="table_devices" layoutX="14.0" layoutY="49.0" prefHeight="487.0" prefWidth="986.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="280.0" AnchorPane.topAnchor="49.0">
                                 <columns>
-                                  <TableColumn fx:id="col_device_ip" minWidth="50.0" prefWidth="90.0" text="IP" />
-                                  <TableColumn fx:id="col_device_port" minWidth="50.0" prefWidth="99.0" text="IfIndex" />
-                                    <TableColumn fx:id="col_device_community" minWidth="50.0" prefWidth="85.0" text="Community" />
-                                    <TableColumn fx:id="col_device_status" minWidth="50.0" prefWidth="63.0" text="Status" />
-                                    <TableColumn fx:id="col_device_speed" prefWidth="103.0" text="Speed (Mbps)" />
+                                  <TableColumn fx:id="col_interface_ip" minWidth="50.0" prefWidth="90.0" text="IP" />
+                                  <TableColumn fx:id="col_interface_port" minWidth="50.0" prefWidth="99.0" text="Port" />
+                                    <TableColumn fx:id="col_interface_community" minWidth="50.0" prefWidth="85.0" text="Community" />
+                                    <TableColumn fx:id="col_interface_status" minWidth="50.0" prefWidth="63.0" text="Status" />
+                                    <TableColumn fx:id="col_interface_speed" prefWidth="103.0" text="Speed (Mbps)" />
                                     <TableColumn fx:id="col_usr_dscr" prefWidth="229.0" text="User Description" />
-                                    <TableColumn fx:id="col_device_description" minWidth="90.0" prefWidth="239.0" text="SNMP Description" />
+                                    <TableColumn fx:id="col_interface_description" minWidth="90.0" prefWidth="239.0" text="SNMP Description" />
                                 </columns>
                               </TableView>
                               </children>
@@ -518,17 +518,36 @@
                            </children>
                         </AnchorPane>
                     </content>
-                  </Tab>
+                  </Tab> -->
                   
                   <Tab fx:id="tab_trap_receiver" text="Trap Receiver">
                     <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="1350.0">
                            <children>
-                              
+                              <Button fx:id="btn_start_receive_trap" layoutX="248.0" layoutY="368.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="80.0" text="Start" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="30.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btn_stop_receive_trap" layoutX="248.0" layoutY="368.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="80.0" text="Stop" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="30.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btn_clear_trap" layoutX="248.0" layoutY="368.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="80.0" text="Clear" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="30.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <TextArea fx:id="txt_trap_output" layoutX="735.0" layoutY="91.0" prefHeight="500.0" prefWidth="620.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="100.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </TextArea>
                            </children>
                         </AnchorPane>
                     </content>
-                  </Tab> -->
+                  </Tab>
               </tabs>
               <VBox.margin>
                   <Insets />

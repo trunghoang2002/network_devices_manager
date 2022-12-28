@@ -2,6 +2,7 @@ package snmp.commands;
 
 import java.io.IOException;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 
@@ -35,8 +36,7 @@ public class SnmpTrapMultiThreadReceiver implements CommandResponder {
 
 	private void init() throws UnknownHostException, IOException {
 		threadPool = ThreadPool.create("TrapPool", 2);
-		dispatcher = new MultiThreadedMessageDispatcher(threadPool,
-				new MessageDispatcherImpl());
+		dispatcher = new MultiThreadedMessageDispatcher(threadPool, new MessageDispatcherImpl());
 		listenAddress = GenericAddress.parse(System.getProperty( "snmp4j.listenAddress", "udp:127.0.0.1/162"));
 		TransportMapping transport;
 		if (listenAddress instanceof UdpAddress) {
@@ -67,6 +67,7 @@ public class SnmpTrapMultiThreadReceiver implements CommandResponder {
 	}
 
 //	@SuppressWarnings("unchecked")
+	public static ArrayList<String[]> list = new ArrayList<String[]>();
 	public void processPdu(CommandResponderEvent event) {
 		System.out.println("----> Bắt đầu phân tích ResponderEvent: <----");
 		if (event == null || event.getPDU() == null) {
@@ -76,6 +77,7 @@ public class SnmpTrapMultiThreadReceiver implements CommandResponder {
 		List<? extends VariableBinding> vbVect = event.getPDU().getVariableBindings();
 		for (VariableBinding vb : vbVect) {
 			System.out.println(vb.getOid() + " = " + vb.getVariable());
+			list.add(new String[] { vb.getOid().toString(), vb.getVariable().toString() });
 		}
 		System.out.println("---->  Quá trình phân tích ResponderEvent đã kết thúc <----");
 	}

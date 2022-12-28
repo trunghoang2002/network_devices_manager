@@ -9,7 +9,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-public class gui_model_device {
+public class gui_model_interface {
 
     public SimpleStringProperty ip;
     public SimpleIntegerProperty port;
@@ -20,9 +20,9 @@ public class gui_model_device {
     public SimpleDoubleProperty speed;
     
     
-    public static ObservableList<gui_model_device> deviceData = FXCollections.observableArrayList();
+    public static ObservableList<gui_model_interface> deviceData = FXCollections.observableArrayList();
 
-    public gui_model_device(String ip,int port,String community,String usr_dscr){
+    public gui_model_interface(String ip,int port,String community,String usr_dscr){
         try {
             this.ip = new SimpleStringProperty(ip);
             this.port = new SimpleIntegerProperty(port);
@@ -32,7 +32,7 @@ public class gui_model_device {
             this.user_description=new SimpleStringProperty(usr_dscr);
             this.speed=new SimpleDoubleProperty(snmp.Datacollector.get_snmp_speed(ip, port, community));
         }catch(IOException ex){
-            Logger.getLogger(gui_model_device.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(gui_model_interface.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -81,13 +81,13 @@ public class gui_model_device {
         }
     
     public static void update_status(){
-        for(gui_model_device d:gui_model_device.deviceData){
+        for(gui_model_interface d:gui_model_interface.deviceData){
             try {
                 //System.out.println("started status");
                 d.device_status=new SimpleStringProperty(snmp.Datacollector.get_snmp_status(d.getIp(), d.getPort(), d.getCommunity()));
                 
             } catch (IOException ex) {
-                Logger.getLogger(gui_model_device.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(gui_model_interface.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         //System.out.println("status");

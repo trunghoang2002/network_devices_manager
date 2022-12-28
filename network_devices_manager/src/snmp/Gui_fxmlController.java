@@ -2,6 +2,7 @@ package snmp;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.DatagramPacket;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -167,6 +168,15 @@ public class Gui_fxmlController {
     private Button btn_device_delete1;
     
     @FXML
+    private Button btn_start_receive_trap;
+    @FXML
+    private Button btn_stop_receive_trap;
+    @FXML
+    private Button btn_clear_trap;
+    @FXML
+    private TextArea txt_trap_output;
+    
+    @FXML
     private Button btn_start_recording;
     
     @FXML
@@ -185,12 +195,12 @@ public class Gui_fxmlController {
     private TextField txt_device_port;
     
     @FXML
-    private TableView<gui_model_device> table_devices;
+    private TableView<gui_model_interface> table_devices;
     @FXML
     private TableView<gui_model_device_status> table_status;
     
     @FXML
-    private TableColumn<gui_model_device,String> col_device_ip;
+    private TableColumn<gui_model_interface,String> col_interface_ip;
     @FXML
     private TableColumn<gui_model_device_status,String> col_device_ip1;
     
@@ -206,15 +216,15 @@ public class Gui_fxmlController {
     private TextField txt_record_port;
     
     @FXML
-    private TableColumn<gui_model_device,Integer> col_device_port;
+    private TableColumn<gui_model_interface,Integer> col_interface_port;
     
     @FXML
-    private TableColumn<gui_model_device,String> col_device_community;
+    private TableColumn<gui_model_interface,String> col_interface_community;
     @FXML
     private TableColumn<gui_model_device_status,String> col_device_community1;
     
     @FXML
-    private TableColumn<gui_model_device,Long> col_device_speed;
+    private TableColumn<gui_model_interface,Long> col_interface_speed;
 
     @FXML
     private TableColumn<gui_model_device_status,Integer> col_ifNumber;
@@ -290,13 +300,13 @@ public class Gui_fxmlController {
     
     
     @FXML
-    private TableColumn<gui_model_device,String> col_device_description;
+    private TableColumn<gui_model_interface,String> col_interface_description;
     
     @FXML
-    private TableColumn<gui_model_device,String> col_usr_dscr;
+    private TableColumn<gui_model_interface,String> col_usr_dscr;
     
     @FXML
-    private TableColumn<gui_model_device,String> col_device_status;
+    private TableColumn<gui_model_interface,String> col_interface_status;
     
     @FXML
     private Label lbl_current_device;
@@ -343,7 +353,7 @@ public class Gui_fxmlController {
     
 //</editor-fold>
  
-    private GridPane grid_devices = new GridPane();;
+    private GridPane grid_interface = new GridPane();;
     
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
@@ -357,23 +367,23 @@ public class Gui_fxmlController {
         assert tab_pane != null : "fx:id=\"tab_pane\" was not injected: check your FXML file 'gui_fxml.fxml'.";
         assert graph != null : "fx:id=\"graph\" was not injected: check your FXML file 'gui_fxml.fxml'.";
 
+        database.check_tables();
         create_btn_minimise();
         initialise_tab();
         
-        database.check_tables();
         // tab monitor
-        creategraph();
+        create_graph_interface();
         create_graph_units_menu();
         make_grid();
         
         // tab status
-        creategraph1();
-        create_table_devices1();
-        create_btn_devices_add1();
-        create_btn_device_delete1();
-        create_btn_device_edit1();
+        create_graph_status();
+        create_table_devices();
+        create_btn_devices_add();
+        create_btn_device_delete();
+        create_btn_device_edit();
         create_click_event_table_status();
-        start_device1();
+        get_device_item();
         
         // tab report
         create_table_records();
@@ -384,20 +394,24 @@ public class Gui_fxmlController {
         create_btn_export_pdf();
         initialise_date_format();
         
-        // tab manager interface
-        load_devices();
-        start_device();
-        create_table_devices();
-        create_btn_devices_add();
-        create_interface_list();
-        create_btn_remove_device();
-        create_btn_edit_description();
-        
         // tab snmp commands
         create_btn_snmpgo();
         create_combobox_snmp_command();
         
-        start_recording();
+        // tab receiver trap
+        create_btn_start_receive_trap();
+        create_btn_stop_receive_trap();
+        create_btn_clear_trap();
+        
+        // tab manager interface
+        load_interface();
+        get_interface_item();
+        create_table_interface();
+        create_btn_interface_add();
+        create_interface_list();
+        create_btn_remove_interface();
+        create_btn_edit_description();
+        start_record_interface();
     }
     
     public void create_btn_minimise(){
@@ -435,8 +449,8 @@ public class Gui_fxmlController {
                 if(combobox_speed.getValue().equals("Kbps")){unit_convertor=1000;}
                 if(combobox_speed.getValue().equals("KBps")){unit_convertor=125;}
                 stop();
-                creategraph();
-                updategraph();
+                create_graph_interface();
+                update_graph_interface();
                 play();
             }
         });
@@ -651,6 +665,65 @@ public class Gui_fxmlController {
         });
     }
     
+    Boolean done;
+    Thread t, t1;
+    void create_btn_start_receive_trap(){
+    	btn_start_receive_trap.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+            	t = new Thread(new Runnable() {
+        			@Override
+        			public void run() {
+        				txt_trap_output.setText("Start listenning... \n");
+        				SnmpTrapMultiThreadReceiver trapReceiver = new SnmpTrapMultiThreadReceiver();
+        				trapReceiver.run();
+        			}
+        		});
+        		t.start();
+        		done = false;
+        		t1 = new Thread(new Runnable() {
+        			@Override
+        			public void run() {
+        				int size = 0;
+        				while(!done) {
+        					try {
+        						Thread.sleep(1000);
+        					} catch (InterruptedException e) {
+//        						e.printStackTrace();
+        					}
+        					if (size != SnmpTrapMultiThreadReceiver.list.size()) {
+                        		for (String[] i : SnmpTrapMultiThreadReceiver.list) {
+                                	txt_trap_output.appendText(i[0] + "      " + i[1] + "\n");
+                        		}
+        						size = SnmpTrapMultiThreadReceiver.list.size();
+        					}
+        				}
+        			}
+        		});
+        		t1.start();
+            }
+        });
+    }
+    void create_btn_stop_receive_trap(){
+    	btn_stop_receive_trap.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                done = true;
+                txt_trap_output.appendText("Listenning stopped");
+                if (t != null && t.isAlive()) t.interrupt();
+                if (t1 != null && t1.isAlive()) t1.interrupt();
+            }
+        });
+    }
+    void create_btn_clear_trap(){
+    	btn_clear_trap.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                txt_trap_output.clear();
+            }
+        });
+    }
+    
     private void makeHeaderWrappable(TableColumn col) {
         Label label = new Label(col.getText());
         label.setStyle("-fx-padding: 8px;");
@@ -665,20 +738,20 @@ public class Gui_fxmlController {
         col.setGraphic(stack);
     }
       
-    void start_device(){
-                ArrayList<gui_model_device> r=database.get_device_data("select * from "+database.tablename_interfaces+";");
-                gui_model_device.deviceData.setAll(r);
-                for(gui_model_device d:gui_model_device.deviceData){
+    void get_interface_item(){
+                ArrayList<gui_model_interface> r=database.get_device_data("select * from "+database.tablename_interfaces+";");
+                gui_model_interface.deviceData.setAll(r);
+                for(gui_model_interface d:gui_model_interface.deviceData){
                     d.speed.set(Math.floor((d.speed.get() * 100))/100);
                     //System.out.println("Setting the value"+d.speed.get());
                 }
-                System.out.println("number of devices found"+gui_model_device.deviceData.size());
+                System.out.println("number of devices found"+gui_model_interface.deviceData.size());
                 table_devices.getItems().setAll(r);
                 add_images();
                 btn_start_recording.setVisible(false);
     }
     
-    void start_device1(){
+    void get_device_item(){
         ArrayList<gui_model_device_status> r=database.get_device_status_data("select * from "+database.tablename_devices+";");
         gui_model_device_status.deviceStatusData.setAll(r);
         table_status.getItems().setAll(r);
@@ -784,16 +857,16 @@ public class Gui_fxmlController {
     }
     
     void return_value(String s){
-        gui_model_device d = table_devices.getSelectionModel().getSelectedItem();
+        gui_model_interface d = table_devices.getSelectionModel().getSelectedItem();
         d.setUser_description(s);
         database.remove_device(d);
         database.add_device(d);
-        table_devices.getItems().setAll(gui_model_device.deviceData);
+        table_devices.getItems().setAll(gui_model_interface.deviceData);
         add_images();
     }
     
     String get_descr(){
-        gui_model_device d = table_devices.getSelectionModel().getSelectedItem();
+        gui_model_interface d = table_devices.getSelectionModel().getSelectedItem();
         String s = d.getUser_description();
         return s;
     }
@@ -836,14 +909,14 @@ public class Gui_fxmlController {
     }
     
     
-    public void load_devices(){
+    public void load_interface(){
         btn_start_recording.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("starting to load devices");
-                ArrayList<gui_model_device> r=database.get_device_data("select * from "+database.tablename_interfaces+";");
+                System.out.println("starting to load interface");
+                ArrayList<gui_model_interface> r=database.get_device_data("select * from "+database.tablename_interfaces+";");
                 
-                gui_model_device.deviceData.setAll(r);
+                gui_model_interface.deviceData.setAll(r);
                 table_devices.getItems().setAll(r);
                 add_images();
                 btn_start_recording.setVisible(false);
@@ -851,20 +924,20 @@ public class Gui_fxmlController {
         });
     }
     
-    void create_btn_remove_device(){
+    void create_btn_remove_interface(){
         btn_remove_devices.setOnAction((ActionEvent e) -> {
             
             if(table_devices.getSelectionModel().getSelectedIndex()!=-1){
-            gui_model_device d = table_devices.getSelectionModel().getSelectedItem();
+            gui_model_interface d = table_devices.getSelectionModel().getSelectedItem();
             
             create_confirm_remove_device_dialog(d);
             }else{
-                create_dialog("Please select a device first");
+                create_dialog("Please select a interface first");
             }
             
         });
     }
-    void create_btn_device_delete1(){
+    void create_btn_device_delete(){
     	btn_device_delete1.setOnAction((ActionEvent e) -> {
             
             if(table_status.getSelectionModel().getSelectedIndex()!=-1){
@@ -877,7 +950,7 @@ public class Gui_fxmlController {
         });
     }
     
-    void create_btn_device_edit1(){
+    void create_btn_device_edit(){
     	btn_device_edit1.setOnAction((ActionEvent e) -> {
             
             if(table_status.getSelectionModel().getSelectedIndex()!=-1){
@@ -926,7 +999,7 @@ public class Gui_fxmlController {
             database.add_device_status(di);
             table_status.getItems().remove(d);
             table_status.getItems().add(di);
-            creategraph1();
+            create_graph_status();
             animation1.stop();
             dialogStage.close();
         });
@@ -954,7 +1027,7 @@ public class Gui_fxmlController {
 			public void handle(Event arg0) {
 				gui_model_device_status d = table_status.getSelectionModel().getSelectedItem();
 				if (!table_status_selected_ip.equals(d.getIp())) {
-					creategraph1();
+					create_graph_status();
 				}
 				table_status_selected_ip = d.getIp();
 				updategraph1(d.getIp(), d.getCommunity());
@@ -968,7 +1041,7 @@ public class Gui_fxmlController {
 		});
     }
     
-   public void create_confirm_remove_device_dialog(gui_model_device d){
+   public void create_confirm_remove_device_dialog(gui_model_interface d){
                 Stage dialogStage = new Stage();
                 dialogStage.initModality(Modality.WINDOW_MODAL);
                 dialogStage.setAlwaysOnTop(true);
@@ -984,8 +1057,8 @@ public class Gui_fxmlController {
                 b_yes.setMinSize(75, 30);
                 b_yes.setOnAction((ActionEvent event) -> {
                     snmp.database.remove_device(d);
-                    gui_model_device.deviceData.remove(d);
-                    table_devices.getItems().setAll(gui_model_device.deviceData);
+                    gui_model_interface.deviceData.remove(d);
+                    table_devices.getItems().setAll(gui_model_interface.deviceData);
                     add_images();
                     dialogStage.close();
                 });
@@ -1154,15 +1227,15 @@ public class Gui_fxmlController {
 
         //grid.getColumnConstraints().addAll(colc,colc,colc);
         //grid.getRowConstraints().add(rowc);
-        grid_devices.getColumnConstraints().setAll(colc1,colc2,colc3);     
-        grid_devices.setGridLinesVisible(false);
-        grid_devices.setPadding(new Insets(10, 10, 10, 10));
-        grid_devices.setHgap(40);
-        grid_devices.setVgap(10);
+        grid_interface.getColumnConstraints().setAll(colc1,colc2,colc3);     
+        grid_interface.setGridLinesVisible(false);
+        grid_interface.setPadding(new Insets(10, 10, 10, 10));
+        grid_interface.setHgap(40);
+        grid_interface.setVgap(10);
         //grid.setStyle("-fx-background-color:red");
     }
     
-    public Label create_lbl(gui_model_device device){
+    public Label create_lbl(gui_model_interface device){
         
         Image image_device_on = new Image(Gui_fxmlController.class.getResourceAsStream("images/port_on.png"));
         img_device_on = new ImageView(image_device_on);
@@ -1220,8 +1293,8 @@ public class Gui_fxmlController {
                 String dev_details = current_ip+" : " + dscr1;
                 lbl_current_device.setText(dev_details);
                 stop();
-                creategraph();
-                updategraph();
+                create_graph_interface();
+                update_graph_interface();
                 play();
             }
         });
@@ -1260,26 +1333,22 @@ public class Gui_fxmlController {
         //create_images();
         int col=0;int row=0;
         int col_limit=3;
-        grid_devices.getChildren().clear();
+        grid_interface.getChildren().clear();
         
-        for(gui_model_device d: gui_model_device.deviceData){
-            
+        for(gui_model_interface d: gui_model_interface.deviceData){
             Label l1 = create_lbl(d);
             lbl_list.add(l1);
             //tilepane.getChildren().add(l1);
-            grid_devices.add(l1,col,row);
-            grid_devices.setAlignment(Pos.CENTER);
+            grid_interface.add(l1,col,row);
+            grid_interface.setAlignment(Pos.CENTER);
             col++;
             
             if(col>(col_limit-1)){
-                
                 col=col%col_limit;
                 row++;
-                
             }
-            
         }
-        scroll_pane.setContent(grid_devices);
+        scroll_pane.setContent(grid_interface);
     }
     
     
@@ -1296,7 +1365,7 @@ public class Gui_fxmlController {
             String text = l.getText();
             
             String descp[] = text.split("\n");
-            for(gui_model_device d:gui_model_device.deviceData){
+            for(gui_model_interface d:gui_model_interface.deviceData){
                 if(d.getIp().equals(descp[0])){
                     if(d.getSnmp_description().equals(descp[1])||d.getUser_description().equals(descp[1])){
                         
@@ -1550,7 +1619,7 @@ public class Gui_fxmlController {
                 dialogStage.show();
     }
    
-    void create_btn_devices_add(){
+    void create_btn_interface_add(){
         btn_device_add.setOnAction((ActionEvent e) -> {
             String ip1 = txt_device_ip.getText();
             String choice = combobox_interfaces.getValue();
@@ -1575,7 +1644,7 @@ public class Gui_fxmlController {
                 	return;
                 }
                 boolean already_present = false;
-                for (gui_model_device d : gui_model_device.deviceData) {
+                for (gui_model_interface d : gui_model_interface.deviceData) {
                     if (d.getIp().equals(ip1) && d.getPort().equals(port)) {
                         already_present=true;
                     }
@@ -1584,8 +1653,8 @@ public class Gui_fxmlController {
                     create_dialog("The interface you are adding is already present in list");
                 } else {
                     System.out.println("adding " + ip1 + ":" + port);
-                    gui_model_device d = new gui_model_device(ip1, port, community, usr_dscr);
-                    gui_model_device.deviceData.add(d);
+                    gui_model_interface d = new gui_model_interface(ip1, port, community, usr_dscr);
+                    gui_model_interface.deviceData.add(d);
                     database.add_device(d);
                     d.speed.set(truncate(d.speed.getValue(),places_truncation));
                     table_devices.getItems().add(d);
@@ -1601,7 +1670,7 @@ public class Gui_fxmlController {
         });
     }
     
-    void create_btn_devices_add1(){
+    void create_btn_devices_add(){
         btn_device_add1.setOnAction((ActionEvent e) -> {
             String ip1 = txt_device_ip1.getText();
             if (!Ping.isReachableByPing(ip1, false)) {
@@ -1638,11 +1707,11 @@ public class Gui_fxmlController {
         });
     }
     
-    void start_recording(){
+    void start_record_interface(){
             System.out.println("\nStarted recording\n");
             
             Datacollector.initialise_data_collection();
-            for(gui_model_device d : gui_model_device.deviceData){
+            for(gui_model_interface d : gui_model_interface.deviceData){
                 String ip_from_devices = d.getIp();
                 int port = d.getPort();
                 String community=d.getCommunity();
@@ -1651,7 +1720,7 @@ public class Gui_fxmlController {
             }
             gui_javafx.start_data_collection();
             
-            updategraph();
+            update_graph_interface();
             play();
             add_images();
             System.out.println("creating images");
@@ -1713,7 +1782,7 @@ public class Gui_fxmlController {
     static CategoryAxis xAxis;
     static NumberAxis yAxis;
     
-    public void creategraph(){
+    public void create_graph_interface(){
          
         //xAxis = new CategoryAxis();
         //yAxis = new NumberAxis();
@@ -1733,7 +1802,7 @@ public class Gui_fxmlController {
         graph.getData().setAll(inp_series,out_series);
     }
     
-    public void creategraph1(){
+    public void create_graph_status(){
         
         //xAxis = new CategoryAxis();
         //yAxis = new NumberAxis();
@@ -1774,7 +1843,7 @@ public class Gui_fxmlController {
         
     }
     
-    public void updategraph(){
+    public void update_graph_interface(){
         set_num_for_animation();
         animation = new Timeline();
         
@@ -1817,7 +1886,7 @@ public class Gui_fxmlController {
             System.out.println("speed(kbps) is in:"+in_speed+" outspeed "+out_speed);
             System.out.println(" found in records "+find);
             
-            for(gui_model_device d: gui_model_device.deviceData){
+            for(gui_model_interface d: gui_model_interface.deviceData){
                 d.update_status();
             }
             refresh_images();
@@ -2031,23 +2100,23 @@ public class Gui_fxmlController {
         
     }
     
-    void create_table_devices(){
-        col_device_ip.setCellValueFactory(
+    void create_table_interface(){
+        col_interface_ip.setCellValueFactory(
             new PropertyValueFactory<>("ip")
         );
-        col_device_port.setCellValueFactory(
+        col_interface_port.setCellValueFactory(
             new PropertyValueFactory<>("port")
         );
-        col_device_community.setCellValueFactory(
+        col_interface_community.setCellValueFactory(
             new PropertyValueFactory<>("community")
         );
-        col_device_speed.setCellValueFactory(
+        col_interface_speed.setCellValueFactory(
             new PropertyValueFactory<>("speed")
         );
-        col_device_description.setCellValueFactory(
+        col_interface_description.setCellValueFactory(
             new PropertyValueFactory<>("snmp_description")
         );
-        col_device_status.setCellValueFactory(
+        col_interface_status.setCellValueFactory(
             new PropertyValueFactory<>("device_status")
         );
         col_usr_dscr.setCellValueFactory(
@@ -2055,7 +2124,7 @@ public class Gui_fxmlController {
         );
     }
     
-    void create_table_devices1(){
+    void create_table_devices(){
         col_device_ip1.setCellValueFactory(
             new PropertyValueFactory<>("ip")
         );

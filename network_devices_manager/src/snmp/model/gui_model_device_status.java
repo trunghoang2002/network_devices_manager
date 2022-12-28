@@ -39,7 +39,7 @@ public class gui_model_device_status {
             value = SnmpGet.getPDUStringvalue(pdu);
             this.sysuptime=new SimpleStringProperty(value);
         }catch(Exception ex){
-            Logger.getLogger(gui_model_device.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(gui_model_interface.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
