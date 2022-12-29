@@ -120,3 +120,8 @@
     -fx-tab-min-height:40; 
     -fx-font: 20px "Serif";
 }
+#tab_trap_receiver{
+     -fx-tab-min-width:40; 
+    -fx-tab-min-height:40; 
+    -fx-font: 20px "Serif";
+}

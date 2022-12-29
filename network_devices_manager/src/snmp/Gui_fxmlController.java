@@ -73,9 +73,6 @@ import snmp.model.*;
 
 
 public class Gui_fxmlController {
-
-
-	//<editor-fold defaultstate="collapsed" desc="FXML Components">
     @FXML
     private ComboBox<String> combobox_speed;
     @FXML
@@ -351,8 +348,6 @@ public class Gui_fxmlController {
     
     @FXML
     private Button btn_snmpgo;
-    
-//</editor-fold>
  
     private GridPane grid_interface = new GridPane();;
     
@@ -669,6 +664,7 @@ public class Gui_fxmlController {
     
     Boolean done;
     Thread t, t1;
+    SnmpTrapMultiThreadReceiver trapReceiver;
     void create_btn_start_receive_trap(){
     	btn_start_receive_trap.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -677,7 +673,7 @@ public class Gui_fxmlController {
         			@Override
         			public void run() {
         				txt_trap_output.setText("Start listenning... \n");
-        				SnmpTrapMultiThreadReceiver trapReceiver = new SnmpTrapMultiThreadReceiver();
+        				trapReceiver = new SnmpTrapMultiThreadReceiver();
         				trapReceiver.run();
         			}
         		});
@@ -714,6 +710,8 @@ public class Gui_fxmlController {
                 txt_trap_output.appendText("Listenning stopped");
                 if (t != null && t.isAlive()) t.interrupt();
                 if (t1 != null && t1.isAlive()) t1.interrupt();
+                SnmpTrapMultiThreadReceiver.list.clear();
+                trapReceiver.close();
             }
         });
     }
@@ -721,7 +719,8 @@ public class Gui_fxmlController {
     	btn_clear_trap.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                txt_trap_output.clear();
+            	txt_trap_output.clear();
+                SnmpTrapMultiThreadReceiver.list.clear();
             }
         });
     }

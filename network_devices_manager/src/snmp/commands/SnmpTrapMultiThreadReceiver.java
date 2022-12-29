@@ -37,7 +37,18 @@ public class SnmpTrapMultiThreadReceiver implements CommandResponder {
 	private void init() throws UnknownHostException, IOException {
 		threadPool = ThreadPool.create("TrapPool", 2);
 		dispatcher = new MultiThreadedMessageDispatcher(threadPool, new MessageDispatcherImpl());
-		listenAddress = GenericAddress.parse(System.getProperty( "snmp4j.listenAddress", "udp:127.0.0.1/162"));
+		listenAddress = GenericAddress.parse(System.getProperty("snmp4j.listenAddress", "udp:127.0.0.1/162"));
+		
+		Address listenAddress1 = GenericAddress.parse(System.getProperty("snmp4j.listenAddress", "udp:172.16.0.2/162"));
+		TransportMapping transport1 = new DefaultUdpTransportMapping((UdpAddress) listenAddress1);
+		Snmp snmp1 = new Snmp(dispatcher, transport1);
+		snmp1.getMessageDispatcher().addMessageProcessingModel(new MPv1());
+		snmp1.getMessageDispatcher().addMessageProcessingModel(new MPv2c());
+		snmp1.getMessageDispatcher().addMessageProcessingModel(new MPv3());
+		USM usm1 = new USM(SecurityProtocols.getInstance(), new OctetString(MPv3.createLocalEngineID()), 0);
+		SecurityModels.getInstance().addSecurityModel(usm1);
+		snmp1.listen();
+		
 		TransportMapping transport;
 		if (listenAddress instanceof UdpAddress) {
 			transport = new DefaultUdpTransportMapping(
@@ -53,6 +64,14 @@ public class SnmpTrapMultiThreadReceiver implements CommandResponder {
 		USM usm = new USM(SecurityProtocols.getInstance(), new OctetString(MPv3.createLocalEngineID()), 0);
 		SecurityModels.getInstance().addSecurityModel(usm);
 		snmp.listen();
+	}
+	
+	public void close() {
+		try {
+			if (snmp != null) {
+				snmp.close();
+			}
+		} catch(Exception e) {}
 	}
 
 	public void run() {
