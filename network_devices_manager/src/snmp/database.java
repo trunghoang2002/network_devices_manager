@@ -54,9 +54,9 @@ public class database {
     static final String USER = gui_javafx.dbusr;
     static final String PASS = gui_javafx.dbpwd;
     
-    static String tablename_records = "recorded_data";
-    static String tablename_interfaces = "interface_data";
-    static String tablename_devices = "device_data";
+    static public String tablename_records = "recorded_data";
+    static public String tablename_interfaces = "interface_data";
+    static public String tablename_devices = "device_data";
     
     static Connection conn;
     static Statement stmt;
@@ -141,7 +141,11 @@ public class database {
                     ");";
          sql[2] =   "CREATE TABLE IF NOT EXISTS "+database_name+"."+tablename_devices+"(" +
                     "device_ip varchar(15) PRIMARY KEY," +
-                    "community varchar(50)" +
+                    "community varchar(50)," +
+                    "system_name varchar(50)," +
+                    "system_description varchar(200)," +
+                    "system_up_time varchar(50)," +
+                    "number_of_interface INT" +
                     ");";
         
         for(String s:sql){
@@ -338,7 +342,7 @@ public class database {
         return output;
     }
     
-    public static ArrayList<String> get_all_distinct(String items,String ip){
+    public static ArrayList<String> get_all_distinct(String items,String ip, String tablename){
         
         ArrayList<String> output= new ArrayList<>();
         
@@ -347,7 +351,7 @@ public class database {
         stmt = conn.createStatement();
         String where_ip="where ip='"+ip+"'";
         if(ip.equals("")){where_ip="";}
-        String sql = "select distinct "+items+" from "+database_name+"."+tablename_records+" "+where_ip+";";
+        String sql = "select distinct "+items+" from "+database_name+"."+tablename+" "+where_ip+";";
         ResultSet rs = stmt.executeQuery(sql);
         
         while(rs.next()){
@@ -519,7 +523,11 @@ public class database {
             while(rs.next()){
                String ip = rs.getString("device_ip");
                String community = rs.getString("community");
-               gui_model_device_status d=new gui_model_device_status(ip, community);
+               String sysname = rs.getString("system_name");
+               String sysdescr = rs.getString("system_description");
+               String sysuptime = rs.getString("system_up_time");
+               int ifnumber = rs.getInt("number_of_interface");
+               gui_model_device_status d=new gui_model_device_status(ip, community, sysname, sysdescr, sysuptime, ifnumber);
                output.add(d);
             }
 
@@ -558,10 +566,8 @@ public class database {
                     port+",'"+community+"',"+speed+",'"+user_description+"'"+",'"+snmp_description+"');";
         
             stmt.executeUpdate(sql); 
-        
             stmt.close();
             conn.close();
-         
         } 
         catch (SQLException ex) {
         	Logger.getLogger(database.class.getName()).log(Level.SEVERE, null, ex);
@@ -579,13 +585,15 @@ public class database {
         
             String ip = d.getIp();
             String community = d.getCommunity();
-            String sql="INSERT INTO  "+database_name+"."+tablename_devices+" VALUES('"+ip+"','"+community+"');";
+            String sysname = d.getSysname();
+            String sysdescr = d.getSysdescr();
+            String sysuptime = d.getSysuptime();
+            int ifnumber = d.getIfnumber();
+            String sql="INSERT INTO  "+database_name+"."+tablename_devices+" VALUES('"+ip+"','"+community+"','"+sysname+"','"+sysdescr+"','"+sysuptime+"',"+ifnumber+");";
         
             stmt.executeUpdate(sql); 
-        
             stmt.close();
             conn.close();
-         
         } 
         catch (SQLException ex) {
         	Logger.getLogger(database.class.getName()).log(Level.SEVERE, null, ex);

@@ -54,6 +54,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.TilePane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.Stop;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
@@ -206,8 +207,6 @@ public class Gui_fxmlController {
     
     @FXML
     private TextField txt_device_ip;
-    @FXML
-    private TextField txt_device_ip1;
     
     @FXML
     private TextField txt_record_ip;
@@ -256,9 +255,13 @@ public class Gui_fxmlController {
     
     @FXML
     private ComboBox<String> combobox_ips;
+    @FXML
+    private ComboBox<String> combobox_ips1;
     
     @FXML
     private Button btn_refresh_ips;
+    @FXML
+    private Button btn_refresh_ips1;
     
     @FXML
     private Button btn_refresh_interfaces;
@@ -388,7 +391,7 @@ public class Gui_fxmlController {
         // tab report
         create_table_records();
         create_btn_record();
-        create_btn_refresh_lists_ip();
+        create_btn_refresh_lists_ip_record();
         create_btn_refresh_lists_port();
         create_btn_generate_last();
         create_btn_export_pdf();
@@ -407,6 +410,7 @@ public class Gui_fxmlController {
         load_interface();
         get_interface_item();
         create_table_interface();
+        create_btn_refresh_lists_ip_interface();
         create_btn_interface_add();
         create_interface_list();
         create_btn_remove_interface();
@@ -1026,14 +1030,23 @@ public class Gui_fxmlController {
 			@Override
 			public void handle(Event arg0) {
 				gui_model_device_status d = table_status.getSelectionModel().getSelectedItem();
+				if (d == null) return;
 				if (!table_status_selected_ip.equals(d.getIp())) {
 					create_graph_status();
 				}
 				table_status_selected_ip = d.getIp();
-				updategraph1(d.getIp(), d.getCommunity());
+				
+				if (animation1 != null) animation1.stop();
+				updategraph_status(d.getIp(), d.getCommunity());
+				stogare_value.clear();
+				ram_value.setText("");
+				cpu_value.setText("");
+				if (!Ping.isReachableByPing(d.getIp(), false)) {
+	            	create_dialog("IP address unreachable");
+	            	return;
+	            }
 				animation1.play();
 				ArrayList<String[]> sto = utilities.getStogareInfo(d.getIp(), d.getCommunity());
-				stogare_value.clear();
 				for (String[] i : sto) {
 					stogare_value.appendText(i[0] + "\n " + i[1] + ", " + i[2] + "\n ");
 				}
@@ -1134,7 +1147,7 @@ public class Gui_fxmlController {
         btn_interface_list.setOnAction((ActionEvent e) -> {
             
             String oid=Record.oid_interface_dscr;
-            String ip1 = txt_device_ip.getText();
+            String ip1 = combobox_ips1.getValue();
             IPAddressValidator v= new IPAddressValidator();
             if (!IPAddressValidator.validate(ip1)) {
                 create_dialog("Please enter a valid IP");
@@ -1156,25 +1169,29 @@ public class Gui_fxmlController {
 //            indexes = snmp.commands.Walk_command.snmpWalk(ip1, community, oid);
             indexes = SnmpWalk.snmpWalk1(ip1, community, oid);
         });
-   } 
-    
-   void create_combobox_ip(){
-    
    }
-   
-   void convert_port_nos_to_dscr(){
-   }
-   
-   void create_btn_refresh_lists_ip(){
+   void create_btn_refresh_lists_ip_record(){
        combobox_ips.setPlaceholder(new Text("Click on Refresh button to generate the list"));
        combobox_ips.setOpacity(0.2);
        btn_refresh_ips.setOnAction((ActionEvent e) -> {
            System.out.println("refreshing lists");
            combobox_ips.setOpacity(1);
-           ArrayList<String> ips = snmp.database.get_all_distinct("ip","");
+           ArrayList<String> ips = snmp.database.get_all_distinct("ip","",snmp.database.tablename_records);
            System.out.println("got"+ips.size());
            ips.add(0, "ALL");
            combobox_ips.getItems().setAll(ips);
+       });
+    }
+   void create_btn_refresh_lists_ip_interface(){
+       combobox_ips1.setPlaceholder(new Text("Click on Refresh button to generate the list"));
+       combobox_ips1.setOpacity(0.2);
+       btn_refresh_ips1.setOnAction((ActionEvent e) -> {
+           System.out.println("refreshing lists");
+           combobox_ips1.setOpacity(1);
+           ArrayList<String> ips = snmp.database.get_all_distinct("device_ip","",snmp.database.tablename_devices);
+           System.out.println("got"+ips.size());
+           ips.add(0, "ALL");
+           combobox_ips1.getItems().setAll(ips);
        });
     }
    
@@ -1621,7 +1638,7 @@ public class Gui_fxmlController {
    
     void create_btn_interface_add(){
         btn_device_add.setOnAction((ActionEvent e) -> {
-            String ip1 = txt_device_ip.getText();
+            String ip1 = combobox_ips.getValue();
             String choice = combobox_interfaces.getValue();
             System.out.println("choice ="+choice);
             if(choice!=null&&!choice.equals("null"))
@@ -1672,7 +1689,7 @@ public class Gui_fxmlController {
     
     void create_btn_devices_add(){
         btn_device_add1.setOnAction((ActionEvent e) -> {
-            String ip1 = txt_device_ip1.getText();
+            String ip1 = txt_device_ip.getText();
             if (!Ping.isReachableByPing(ip1, false)) {
             	create_dialog("IP address unreachable");
             	return;
@@ -1701,7 +1718,7 @@ public class Gui_fxmlController {
                 gui_model_device_status.deviceStatusData.add(d);
                 database.add_device_status(d);
                 table_status.getItems().add(d);
-                txt_device_ip1.setText("");
+                txt_device_ip.setText("");
                 txt_device_community1.setText("");
             }
         });
@@ -1975,36 +1992,50 @@ public class Gui_fxmlController {
         animation.setCycleCount(Animation.INDEFINITE);
     }
     
-    public void updategraph1(String ip, String community){
+    public void updategraph_status(String ip, String community){
         animation1 = new Timeline();
         
         System.out.println("update called");
         
-        animation1.getKeyFrames().add(new KeyFrame(Duration.seconds(snmp.Datacollector.update_freq), (ActionEvent actionEvent) -> {
+        animation1.getKeyFrames().add(new KeyFrame(Duration.seconds(2), (ActionEvent actionEvent) -> {
             
             String date = sdf.format(new Date());
-            Double CPU_usage =  utilities.getCPUusage(ip, community);
-            Double RAM_usage =  utilities.getRAMusage(ip, community);
-            double[] pos = splitpane_monitor1.getDividerPositions();
-            int size_of_x_axis =8;
             
-            if(pos[0]<0.4){size_of_x_axis=15;}
-            if(pos[0]<0.2){size_of_x_axis=20;}
-            
-            cpu_value.setText(Math.round(CPU_usage) + " %");
-            ram_value.setText(Math.round(RAM_usage) + " %");
-
-            out_series1.getData().add(new XYChart.Data(date, CPU_usage));
-            if(out_series1.getData().size()>size_of_x_axis){
-                while(out_series1.getData().size()!=size_of_x_axis){
-                out_series1.getData().remove(0);
-                }
+            if (!Ping.isReachableByPing(ip, false)) {
+            	create_dialog("IP address unreachable");
+            	graph1.getData().clear();
+            	stogare_value.clear();
+				ram_value.setText("");
+				cpu_value.setText("");
+            	animation1.stop();
+            	return;
             }
-            inp_series1.getData().add(new XYChart.Data(date, RAM_usage));
-            if(inp_series1.getData().size()>size_of_x_axis){
-                while(inp_series1.getData().size()!=size_of_x_axis){
-                inp_series1.getData().remove(0);
+            try {
+            	Double CPU_usage =  utilities.getCPUusage(ip, community);
+                Double RAM_usage =  utilities.getRAMusage(ip, community);
+                double[] pos = splitpane_monitor1.getDividerPositions();
+                int size_of_x_axis =8;
+                
+                if(pos[0]<0.4){size_of_x_axis=15;}
+                if(pos[0]<0.2){size_of_x_axis=20;}
+                
+                cpu_value.setText(Math.round(CPU_usage) + " %");
+                ram_value.setText(Math.round(RAM_usage) + " %");
+
+                out_series1.getData().add(new XYChart.Data(date, CPU_usage));
+                if(out_series1.getData().size()>size_of_x_axis){
+                    while(out_series1.getData().size()!=size_of_x_axis){
+                    out_series1.getData().remove(0);
+                    }
                 }
+                inp_series1.getData().add(new XYChart.Data(date, RAM_usage));
+                if(inp_series1.getData().size()>size_of_x_axis){
+                    while(inp_series1.getData().size()!=size_of_x_axis){
+                    inp_series1.getData().remove(0);
+                    }
+                }
+            } catch(Exception e) {
+//            	e.printStackTrace();
             }
         }
         ));

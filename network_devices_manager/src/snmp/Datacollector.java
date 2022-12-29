@@ -148,7 +148,7 @@ public class Datacollector {
     static int tmp_index;
     
     //after how many seconds shoulf we update
-    static final int update_freq = 12;
+    static final int update_freq = 10;
     //after how many updates should we calculate bandwidth
     static final int calc_freq=1;
     //after how many calculations of bandwidth should the data be stored in database

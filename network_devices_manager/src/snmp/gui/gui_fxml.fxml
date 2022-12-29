@@ -163,7 +163,7 @@
                                           <Font size="18.0" />
                                        </font>
                                     </Label>
-                                    <TextField fx:id="txt_device_ip1" layoutX="150.0" layoutY="515.0" AnchorPane.bottomAnchor="115.0" />
+                                    <TextField fx:id="txt_device_ip" layoutX="150.0" layoutY="515.0" AnchorPane.bottomAnchor="115.0" />
                                     <Label layoutX="400.0" layoutY="515.0" text="Community" AnchorPane.bottomAnchor="115.0">
                                        <font>
                                           <Font size="18.0" />
@@ -237,7 +237,7 @@
                                                 <Font size="16.0" />
                                              </font>
                                           </Label>
-                                          <TextArea fx:id="stogare_value" layoutX="230.0" layoutY="45.0" prefHeight="89.0" prefWidth="299.0" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" text="sto">
+                                          <TextArea fx:id="stogare_value" layoutX="230.0" layoutY="45.0" prefHeight="89.0" prefWidth="299.0" text="sto" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
                                              <font>
                                                 <Font size="12.0" />
                                              </font>
@@ -373,55 +373,56 @@
                                           <Font size="18.0" />
                                        </font>
                                     </Label>
-                                    <TextField fx:id="txt_device_ip" layoutX="100.0" layoutY="82.0" />
-                                    <Label layoutX="3.0" layoutY="114.0" text="Community">
+                                    <Button fx:id="btn_refresh_ips1" layoutX="148.0" layoutY="113.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="56.0" text="Refresh" />
+                                    <ComboBox fx:id="combobox_ips1" layoutX="107.0" layoutY="82.0" prefHeight="25.0" prefWidth="168.0" />
+                                    <Label layoutX="4.0" layoutY="149.0" text="Community">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                     </Label>
-                                    <TextField fx:id="txt_device_community" layoutX="102.0" layoutY="115.0" promptText="public" />
-                                    <Label layoutX="31.0" layoutY="151.0" text="Port">
+                                    <TextField fx:id="txt_device_community" layoutX="103.0" layoutY="150.0" promptText="public" />
+                                    <Label layoutX="32.0" layoutY="186.0" text="Port">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                     </Label>
-                                    <Button fx:id="btn_interface_list" layoutX="105.0" layoutY="152.0" mnemonicParsing="false" text="Generate Interface List" />
-                                    <ComboBox fx:id="combobox_interfaces" layoutX="5.0" layoutY="187.0" prefHeight="25.0" prefWidth="244.0" />
-                                    <Label layoutX="2.0" layoutY="223.0" prefHeight="53.0" prefWidth="95.0" text="User &#10;Description&#10;">
+                                    <Button fx:id="btn_interface_list" layoutX="106.0" layoutY="187.0" mnemonicParsing="false" text="Generate Interface List" />
+                                    <ComboBox fx:id="combobox_interfaces" layoutX="6.0" layoutY="222.0" prefHeight="25.0" prefWidth="244.0" />
+                                    <Label layoutX="3.0" layoutY="258.0" prefHeight="53.0" prefWidth="95.0" text="User &#10;Description&#10;">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                     </Label>
-                                    <TextField fx:id="txt_device_usr_dscr" layoutX="102.0" layoutY="224.0" prefHeight="12.0" prefWidth="149.0" promptText="Additional Information" />
-                                    <Button fx:id="btn_device_add" layoutX="159.0" layoutY="276.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Add">
+                                    <TextField fx:id="txt_device_usr_dscr" layoutX="103.0" layoutY="259.0" prefHeight="12.0" prefWidth="149.0" promptText="Additional Information" />
+                                    <Button fx:id="btn_device_add" layoutX="160.0" layoutY="311.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Add">
                                        <font>
                                           <Font name="System Bold" size="16.0" />
                                        </font>
                                     </Button>
-                                    <Separator layoutX="-1.0" layoutY="336.0" prefWidth="200.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" />
-                                    <Label layoutX="4.0" layoutY="339.0" text="Edit user Description">
+                                    <Separator layoutY="371.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                    <Label layoutX="5.0" layoutY="374.0" text="Edit user Description">
                                        <font>
                                           <Font name="System Bold" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Button fx:id="btn_edit_dscr" layoutX="68.0" layoutY="373.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="132.0" text="Edit Description">
+                                    <Button fx:id="btn_edit_dscr" layoutX="69.0" layoutY="408.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="132.0" text="Edit Description">
                                        <font>
                                           <Font name="System Bold" size="14.0" />
                                        </font></Button>
-                                    <Separator layoutX="-1.0" layoutY="364.0" prefWidth="200.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" />
-                                    <Separator layoutX="1.0" layoutY="422.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                                    <Label layoutX="6.0" layoutY="425.0" text="Remove Interface">
+                                    <Separator layoutY="399.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                    <Separator layoutX="1.0" layoutY="457.0" prefWidth="200.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" />
+                                    <Label layoutX="7.0" layoutY="460.0" text="Remove Interface">
                                        <font>
                                           <Font name="System Bold" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Separator layoutX="1.0" layoutY="451.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                                    <Button fx:id="btn_remove_devices" layoutX="19.0" layoutY="463.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="214.0" text="Remove Selected Device">
+                                    <Separator layoutX="1.0" layoutY="486.0" prefWidth="200.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" />
+                                    <Button fx:id="btn_remove_devices" layoutX="20.0" layoutY="498.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="214.0" text="Remove Selected Device">
                                        <font>
                                           <Font name="System Bold" size="14.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="btn_start_recording" layoutX="58.0" layoutY="493.0" mnemonicParsing="false" text="Button" />
+                                    <Button fx:id="btn_start_recording" layoutX="59.0" layoutY="528.0" mnemonicParsing="false" text="Button" />
                                  </children>
                               </AnchorPane>
                               <Label layoutX="14.0" layoutY="14.0" text="Interfaces being currently monitored">
@@ -429,7 +430,7 @@
                                     <Font name="System Bold" size="20.0" />
                                  </font>
                               </Label>
-                              <TableView fx:id="table_devices" layoutX="14.0" layoutY="49.0" prefHeight="487.0" prefWidth="986.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="280.0" AnchorPane.topAnchor="49.0">
+                              <TableView fx:id="table_devices" layoutX="14.0" layoutY="49.0" prefHeight="623.0" prefWidth="1030.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="306.0" AnchorPane.topAnchor="49.0">
                                 <columns>
                                   <TableColumn fx:id="col_interface_ip" minWidth="50.0" prefWidth="90.0" text="IP" />
                                   <TableColumn fx:id="col_interface_port" minWidth="50.0" prefWidth="99.0" text="Port" />

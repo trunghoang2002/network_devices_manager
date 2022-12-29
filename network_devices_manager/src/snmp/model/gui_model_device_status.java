@@ -31,13 +31,25 @@ public class gui_model_device_status {
             this.ifnumber=new SimpleIntegerProperty(Integer.parseInt(value));
             pdu = SnmpGet.snmpGet(ip, community, "1.3.6.1.2.1.1.5.0");
             value = SnmpGet.getPDUStringvalue(pdu);
-            this.sysname=new SimpleStringProperty("hoang");
+            this.sysname=new SimpleStringProperty(value);
             pdu = SnmpGet.snmpGet(ip, community, "1.3.6.1.2.1.1.1.0");
             value = SnmpGet.getPDUStringvalue(pdu);
             this.sysdescr=new SimpleStringProperty(value);
             pdu = SnmpGet.snmpGet(ip, community, "1.3.6.1.2.1.1.3.0");
             value = SnmpGet.getPDUStringvalue(pdu);
             this.sysuptime=new SimpleStringProperty(value);
+        }catch(Exception ex){
+            Logger.getLogger(gui_model_interface.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    public gui_model_device_status(String ip,String community, String sysname, String sysdescr, String sysuptime, int ifnumber){
+        try {
+            this.ip = new SimpleStringProperty(ip);
+            this.community = new SimpleStringProperty(community);
+            this.ifnumber=new SimpleIntegerProperty(ifnumber);
+            this.sysname=new SimpleStringProperty(sysname);
+            this.sysdescr=new SimpleStringProperty(sysdescr);
+            this.sysuptime=new SimpleStringProperty(sysuptime);
         }catch(Exception ex){
             Logger.getLogger(gui_model_interface.class.getName()).log(Level.SEVERE, null, ex);
         }
