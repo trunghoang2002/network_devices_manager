@@ -294,8 +294,6 @@ public class Gui_fxmlController {
     
     @FXML
     private TextField txt_device_community;
-    @FXML
-    private TextField txt_device_community1;
     
     
     @FXML
@@ -1148,17 +1146,16 @@ public class Gui_fxmlController {
             
             String oid=Record.oid_interface_dscr;
             String ip1 = combobox_ips1.getValue();
-            IPAddressValidator v= new IPAddressValidator();
-            if (!IPAddressValidator.validate(ip1)) {
-                create_dialog("Please enter a valid IP");
+            if (ip1 == null) {
+                create_dialog("Please choose a IP address first");
                 return;
             }
             if (!Ping.isReachableByPing(ip1, false)) {
             	create_dialog("IP address unreachable");
             	return;
             }
-            String community = txt_device_community.getText();
-            if(community.equals("")){community="public";}
+            String community = database.getCommunityByIP(ip1);
+            
 //            interfaces = snmp.commands.Walk_command.snmpWalk(ip1, community, oid);
             interfaces = SnmpWalk.snmpWalk1(ip1, community, oid);
             System.out.println("");
@@ -1168,6 +1165,7 @@ public class Gui_fxmlController {
             oid=Record.oid_IFindexes;
 //            indexes = snmp.commands.Walk_command.snmpWalk(ip1, community, oid);
             indexes = SnmpWalk.snmpWalk1(ip1, community, oid);
+            combobox_ips1.setDisable(true);
         });
    }
    void create_btn_refresh_lists_ip_record(){
@@ -1186,11 +1184,11 @@ public class Gui_fxmlController {
        combobox_ips1.setPlaceholder(new Text("Click on Refresh button to generate the list"));
        combobox_ips1.setOpacity(0.2);
        btn_refresh_ips1.setOnAction((ActionEvent e) -> {
+    	   combobox_ips1.setDisable(false);
+    	   combobox_interfaces.getItems().clear();
            System.out.println("refreshing lists");
            combobox_ips1.setOpacity(1);
            ArrayList<String> ips = snmp.database.get_all_distinct("device_ip","",snmp.database.tablename_devices);
-           System.out.println("got"+ips.size());
-           ips.add(0, "ALL");
            combobox_ips1.getItems().setAll(ips);
        });
     }
@@ -1638,7 +1636,7 @@ public class Gui_fxmlController {
    
     void create_btn_interface_add(){
         btn_device_add.setOnAction((ActionEvent e) -> {
-            String ip1 = combobox_ips.getValue();
+            String ip1 = combobox_ips1.getValue();
             String choice = combobox_interfaces.getValue();
             System.out.println("choice ="+choice);
             if(choice!=null&&!choice.equals("null"))
@@ -1648,18 +1646,16 @@ public class Gui_fxmlController {
                 int port= Integer.parseInt(port_string);
                 //String port_string=txt_device_port.getText();
                 //int port= Integer.parseInt(port_string);
-                String community = txt_device_community.getText();
-                if(community.equals("")){community="public";}
-                String usr_dscr = txt_device_usr_dscr.getText();
-                IPAddressValidator v= new IPAddressValidator();
-                if (!IPAddressValidator.validate(ip1)) {
-                    create_dialog("Please enter a Valid IP");
+                if (ip1 == null) {
+                    create_dialog("Please choose a IP address first");
                     return;
                 }
                 if (!Ping.isReachableByPing(ip1, false)) {
                 	create_dialog("IP address unreachable");
                 	return;
                 }
+                String community = database.getCommunityByIP(ip1);
+                String usr_dscr = txt_device_usr_dscr.getText();
                 boolean already_present = false;
                 for (gui_model_interface d : gui_model_interface.deviceData) {
                     if (d.getIp().equals(ip1) && d.getPort().equals(port)) {
@@ -1679,7 +1675,7 @@ public class Gui_fxmlController {
                     txt_device_usr_dscr.setText("");
                     add_images();
                 }
-            } 
+            }
             else
             {
                 create_dialog("Please select a Interface first!");
@@ -1694,7 +1690,7 @@ public class Gui_fxmlController {
             	create_dialog("IP address unreachable");
             	return;
             }
-            String community = txt_device_community1.getText();
+            String community = txt_device_community.getText();
             if(community.equals("")){community="public";}
             IPAddressValidator v= new IPAddressValidator();
             if (!IPAddressValidator.validate(ip1)) {
@@ -1719,7 +1715,7 @@ public class Gui_fxmlController {
                 database.add_device_status(d);
                 table_status.getItems().add(d);
                 txt_device_ip.setText("");
-                txt_device_community1.setText("");
+                txt_device_community.setText("");
             }
         });
     }

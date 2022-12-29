@@ -10,29 +10,46 @@ import snmp.model.*;
 public class database {
 
     public static void main(String[] args) {
-    	
     }
     
-    public static ArrayList<String> getallIP() {
-    	ArrayList<String> list = new ArrayList<String>();
+//    public static ArrayList<String> getallIP() {
+//    	ArrayList<String> list = new ArrayList<String>();
+//    	try {
+//    		create_connection();
+//            stmt = conn.createStatement();
+//            //start
+//            String sql="select distinct device_ip from "+database_name+"."+tablename_interfaces+";";
+//            ResultSet rs = stmt.executeQuery(sql);
+//           
+//           while(rs.next()){
+//        	   String tmp = rs.getString(1);
+//        	   list.add(tmp);
+//           }
+//           rs.close();
+//           stmt.close();
+//           conn.close();
+//    	} catch (Exception e) {
+//    		e.printStackTrace();
+//    	}
+//    	return list;
+//    }
+    public static String getCommunityByIP(String ip) {
+    	String community = "";
     	try {
     		create_connection();
             stmt = conn.createStatement();
             //start
-            String sql="select distinct device_ip from "+database_name+"."+tablename_interfaces+";";
+            String sql="select community from "+database_name+"."+tablename_devices+" where device_ip = '"+ip+"';";
             ResultSet rs = stmt.executeQuery(sql);
-           
-           while(rs.next()){
-        	   String tmp = rs.getString(0);
-        	   list.add(tmp);
-           }
-           rs.close();
-           stmt.close();
-           conn.close();
+            rs.next();
+            community = rs.getString(1);
+        	rs.close();
+        	stmt.close();
+        	conn.close();
     	} catch (Exception e) {
     		e.printStackTrace();
     	}
-    	return list;
+    	return community;
     }
     
     //for data coming from database
