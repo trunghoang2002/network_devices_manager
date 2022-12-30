@@ -11,7 +11,7 @@ import snmp.commands.SnmpGetNext;
 
 public class utilities {
     public static void main(String[] args) {
-        String ip = "localhost";
+        String ip = "172.16.0.1";
         String community = "public";
         DecimalFormat df = new DecimalFormat("#.###");
 //        try {

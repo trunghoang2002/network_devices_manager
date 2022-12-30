@@ -137,7 +137,12 @@ Changing octets oid
 changed oid to inoctets= 1.3.6.1.2.1.2.2.1.10. and outoctets to1.3.6.1.2.1.2.2.1.16.
 creating images
 time:0
-sending arraylist of size0
+update called
+Storage: 
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = sending arraylist of size0
 size of records arraylist0
 speed(kbps) is in:0.0 outspeed 0.0
  found in records false
@@ -145,60 +150,73 @@ Inside repeat function
 time:10
 Connecting to database...
 END
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',6,'2022-12-30 09:23:04',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',6,'2022-12-30 09:49:11',0.0,0.0,0.0,0.0,0.0,0.0);
 Skipping as NO data recieved for 127.0.0.1:7
 Skipping as NO data recieved for 127.0.0.1:8
 Skipping as NO data recieved for 127.0.0.1:9
 Skipping as NO data recieved for 127.0.0.1:10
 Skipping as NO data recieved for 127.0.0.1:11
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',12,'2022-12-30 09:23:04',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',12,'2022-12-30 09:49:11',0.0,0.0,0.0,0.0,0.0,0.0);
 Skipping as NO data recieved for 127.0.0.1:13
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',14,'2022-12-30 09:23:04',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',14,'2022-12-30 09:49:11',0.0,0.0,0.0,0.0,0.0,0.0);
 Skipping as NO data recieved for 127.0.0.1:15
 Skipping as NO data recieved for 127.0.0.1:16
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',17,'2022-12-30 09:23:04',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',17,'2022-12-30 09:49:11',0.0,0.0,0.0,0.0,0.0,0.0);
 Skipping as NO data recieved for 127.0.0.1:18
 Skipping as NO data recieved for 127.0.0.1:19
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',20,'2022-12-30 09:23:05',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',20,'2022-12-30 09:49:11',0.0,0.0,0.0,0.0,0.0,0.0);
 Skipping as NO data recieved for 127.0.0.1:21
 Skipping as NO data recieved for 127.0.0.1:22
 Skipping as NO data recieved for 127.0.0.1:23
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',26,'2022-12-30 09:23:05',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',27,'2022-12-30 09:23:05',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',28,'2022-12-30 09:23:05',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',29,'2022-12-30 09:23:05',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',30,'2022-12-30 09:23:05',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',31,'2022-12-30 09:23:05',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',32,'2022-12-30 09:23:05',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',33,'2022-12-30 09:23:05',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',34,'2022-12-30 09:23:05',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',35,'2022-12-30 09:23:05',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',36,'2022-12-30 09:23:05',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',37,'2022-12-30 09:23:05',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',38,'2022-12-30 09:23:05',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',39,'2022-12-30 09:23:05',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',40,'2022-12-30 09:23:05',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',41,'2022-12-30 09:23:05',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',42,'2022-12-30 09:23:05',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',26,'2022-12-30 09:49:11',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',27,'2022-12-30 09:49:11',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',28,'2022-12-30 09:49:11',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',29,'2022-12-30 09:49:11',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',30,'2022-12-30 09:49:11',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',31,'2022-12-30 09:49:11',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',32,'2022-12-30 09:49:11',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',33,'2022-12-30 09:49:11',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',34,'2022-12-30 09:49:11',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',35,'2022-12-30 09:49:11',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',36,'2022-12-30 09:49:11',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',37,'2022-12-30 09:49:11',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',38,'2022-12-30 09:49:11',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',39,'2022-12-30 09:49:11',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',40,'2022-12-30 09:49:11',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',41,'2022-12-30 09:49:12',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',42,'2022-12-30 09:49:12',0.0,0.0,0.0,0.0,0.0,0.0);
 Skipping as NO data recieved for 127.0.0.1:43
 Skipping as NO data recieved for 127.0.0.1:44
 Skipping as NO data recieved for 127.0.0.1:45
 Skipping as NO data recieved for 127.0.0.1:46
 Skipping as NO data recieved for 127.0.0.1:47
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',48,'2022-12-30 09:23:05',8.0E-4,5.7E-4,0.0012474,8.935E-4,9.979E-4,7.148E-4);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',49,'2022-12-30 09:23:05',8.0E-4,5.7E-4,0.0012474,8.935E-4,9.979E-4,7.148E-4);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',50,'2022-12-30 09:23:05',8.0E-4,5.7E-4,0.0012474,8.935E-4,9.979E-4,7.148E-4);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',51,'2022-12-30 09:23:05',8.0E-4,5.7E-4,0.0012474,8.935E-4,9.979E-4,7.148E-4);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',52,'2022-12-30 09:23:05',8.0E-4,5.7E-4,0.0012474,8.935E-4,9.979E-4,7.148E-4);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',53,'2022-12-30 09:23:05',8.0E-4,5.7E-4,0.0012474,8.935E-4,9.979E-4,7.148E-4);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',54,'2022-12-30 09:23:05',8.0E-4,5.7E-4,0.0012474,8.935E-4,9.979E-4,7.148E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',48,'2022-12-30 09:49:12',1.6E-4,2.0E-4,2.517E-4,3.223E-4,2.014E-4,2.578E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',49,'2022-12-30 09:49:12',1.6E-4,2.0E-4,2.517E-4,3.223E-4,2.014E-4,2.578E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',50,'2022-12-30 09:49:12',1.6E-4,2.0E-4,2.517E-4,3.223E-4,2.014E-4,2.578E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',51,'2022-12-30 09:49:12',1.6E-4,2.0E-4,2.517E-4,3.223E-4,2.014E-4,2.578E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',52,'2022-12-30 09:49:12',1.6E-4,2.0E-4,2.517E-4,3.223E-4,2.014E-4,2.578E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',53,'2022-12-30 09:49:12',1.6E-4,2.0E-4,2.517E-4,3.223E-4,2.014E-4,2.578E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',54,'2022-12-30 09:49:12',1.6E-4,2.0E-4,2.517E-4,3.223E-4,2.014E-4,2.578E-4);
 Skipping as NO data recieved for 127.0.0.1:55
 Skipping as NO data recieved for 127.0.0.1:56
 Skipping as NO data recieved for 127.0.0.1:57
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',25,'2022-12-30 09:23:05',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',25,'2022-12-30 09:49:12',0.0,0.0,0.0,0.0,0.0,0.0);
 Skipping as NO data recieved for 127.0.0.1:5
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',24,'2022-12-30 09:23:05',8.0E-4,5.7E-4,0.0012474,8.935E-4,9.979E-4,7.148E-4);
-sending arraylist of size53
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',24,'2022-12-30 09:49:12',1.6E-4,2.0E-4,2.517E-4,3.223E-4,2.014E-4,2.578E-4);
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = refreshing lists
+Connecting to database...
+END
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = Connecting to database...
+END
+[true] targetOID.leftMostCompare() != 0
+
+[true] targetOID.leftMostCompare() != 0
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = sending arraylist of size53
 size of records arraylist53
 speed(kbps) is in:0.0 outspeed 0.0
  found in records false
@@ -206,120 +224,919 @@ Inside repeat function
 time:20
 Connecting to database...
 END
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',6,'2022-12-30 09:23:16',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',6,'2022-12-30 09:49:23',0.0,0.0,0.0,0.0,0.0,0.0);
 Skipping as NO data recieved for 127.0.0.1:7
 Skipping as NO data recieved for 127.0.0.1:8
 Skipping as NO data recieved for 127.0.0.1:9
 Skipping as NO data recieved for 127.0.0.1:10
 Skipping as NO data recieved for 127.0.0.1:11
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',12,'2022-12-30 09:23:16',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',12,'2022-12-30 09:49:23',0.0,0.0,0.0,0.0,0.0,0.0);
 Skipping as NO data recieved for 127.0.0.1:13
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',14,'2022-12-30 09:23:16',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',14,'2022-12-30 09:49:23',0.0,0.0,0.0,0.0,0.0,0.0);
 Skipping as NO data recieved for 127.0.0.1:15
 Skipping as NO data recieved for 127.0.0.1:16
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',17,'2022-12-30 09:23:16',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',17,'2022-12-30 09:49:23',0.0,0.0,0.0,0.0,0.0,0.0);
 Skipping as NO data recieved for 127.0.0.1:18
 Skipping as NO data recieved for 127.0.0.1:19
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',20,'2022-12-30 09:23:16',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',20,'2022-12-30 09:49:23',0.0,0.0,0.0,0.0,0.0,0.0);
 Skipping as NO data recieved for 127.0.0.1:21
 Skipping as NO data recieved for 127.0.0.1:22
 Skipping as NO data recieved for 127.0.0.1:23
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',26,'2022-12-30 09:23:16',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',27,'2022-12-30 09:23:16',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',28,'2022-12-30 09:23:16',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',29,'2022-12-30 09:23:16',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',30,'2022-12-30 09:23:16',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',31,'2022-12-30 09:23:16',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',32,'2022-12-30 09:23:16',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',33,'2022-12-30 09:23:16',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',34,'2022-12-30 09:23:16',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',35,'2022-12-30 09:23:16',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',36,'2022-12-30 09:23:16',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',37,'2022-12-30 09:23:16',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',38,'2022-12-30 09:23:16',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',39,'2022-12-30 09:23:16',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',40,'2022-12-30 09:23:16',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',41,'2022-12-30 09:23:16',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',42,'2022-12-30 09:23:16',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',26,'2022-12-30 09:49:23',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',27,'2022-12-30 09:49:23',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',28,'2022-12-30 09:49:23',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',29,'2022-12-30 09:49:23',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',30,'2022-12-30 09:49:23',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',31,'2022-12-30 09:49:23',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',32,'2022-12-30 09:49:23',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',33,'2022-12-30 09:49:23',0.0,0.0,0.0,0.0,0.0,0.0);
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',34,'2022-12-30 09:49:23',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',35,'2022-12-30 09:49:23',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',36,'2022-12-30 09:49:23',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',37,'2022-12-30 09:49:23',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',38,'2022-12-30 09:49:23',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',39,'2022-12-30 09:49:23',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',40,'2022-12-30 09:49:23',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',41,'2022-12-30 09:49:23',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',42,'2022-12-30 09:49:23',0.0,0.0,0.0,0.0,0.0,0.0);
 Skipping as NO data recieved for 127.0.0.1:43
 Skipping as NO data recieved for 127.0.0.1:44
 Skipping as NO data recieved for 127.0.0.1:45
 Skipping as NO data recieved for 127.0.0.1:46
 Skipping as NO data recieved for 127.0.0.1:47
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',48,'2022-12-30 09:23:16',3.4E-4,2.0E-4,5.846E-4,3.538E-4,4.251E-4,2.573E-4);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',49,'2022-12-30 09:23:16',3.4E-4,2.0E-4,5.846E-4,3.538E-4,4.251E-4,2.573E-4);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',50,'2022-12-30 09:23:16',3.4E-4,2.0E-4,5.846E-4,3.538E-4,4.251E-4,2.573E-4);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',51,'2022-12-30 09:23:16',3.4E-4,2.0E-4,5.846E-4,3.538E-4,4.251E-4,2.573E-4);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',52,'2022-12-30 09:23:16',3.4E-4,2.0E-4,5.846E-4,3.538E-4,4.251E-4,2.573E-4);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',53,'2022-12-30 09:23:16',3.4E-4,2.0E-4,5.846E-4,3.538E-4,4.251E-4,2.573E-4);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',54,'2022-12-30 09:23:16',3.4E-4,2.0E-4,5.846E-4,3.538E-4,4.251E-4,2.573E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',48,'2022-12-30 09:49:23',1.7E-4,1.399E-4,2.994E-4,2.47E-4,2.177E-4,1.796E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',49,'2022-12-30 09:49:23',1.7E-4,1.399E-4,2.994E-4,2.47E-4,2.177E-4,1.796E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',50,'2022-12-30 09:49:23',1.7E-4,1.399E-4,2.994E-4,2.47E-4,2.177E-4,1.796E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',51,'2022-12-30 09:49:23',1.7E-4,1.399E-4,2.994E-4,2.47E-4,2.177E-4,1.796E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',52,'2022-12-30 09:49:23',1.7E-4,1.399E-4,2.994E-4,2.47E-4,2.177E-4,1.796E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',53,'2022-12-30 09:49:23',1.7E-4,1.399E-4,2.994E-4,2.47E-4,2.177E-4,1.796E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',54,'2022-12-30 09:49:23',1.7E-4,1.399E-4,2.994E-4,2.47E-4,2.177E-4,1.796E-4);
 Skipping as NO data recieved for 127.0.0.1:55
 Skipping as NO data recieved for 127.0.0.1:56
 Skipping as NO data recieved for 127.0.0.1:57
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',25,'2022-12-30 09:23:16',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',25,'2022-12-30 09:49:23',0.0,0.0,0.0,0.0,0.0,0.0);
 Skipping as NO data recieved for 127.0.0.1:5
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',24,'2022-12-30 09:23:16',3.4E-4,2.0E-4,5.846E-4,3.538E-4,4.251E-4,2.573E-4);
-sending arraylist of size106
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',24,'2022-12-30 09:49:23',1.7E-4,1.399E-4,2.994E-4,2.47E-4,2.177E-4,1.796E-4);
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = choice =FastEthernet0/0
+Connecting to database...
+END
+adding 172.16.0.1:1
+OID = 1.3.6.1.2.1.2.2.1.2.1
+Value = Connecting to database...
+END
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = sending arraylist of size106
 size of records arraylist106
 speed(kbps) is in:0.0 outspeed 0.0
  found in records false
-Inside repeat function
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = Inside repeat function
 time:30
 Connecting to database...
 END
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',6,'2022-12-30 09:23:28',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',6,'2022-12-30 09:49:34',0.0,0.0,0.0,0.0,0.0,0.0);
 Skipping as NO data recieved for 127.0.0.1:7
 Skipping as NO data recieved for 127.0.0.1:8
 Skipping as NO data recieved for 127.0.0.1:9
 Skipping as NO data recieved for 127.0.0.1:10
 Skipping as NO data recieved for 127.0.0.1:11
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',12,'2022-12-30 09:23:28',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',12,'2022-12-30 09:49:34',0.0,0.0,0.0,0.0,0.0,0.0);
 Skipping as NO data recieved for 127.0.0.1:13
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',14,'2022-12-30 09:23:28',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',14,'2022-12-30 09:49:34',0.0,0.0,0.0,0.0,0.0,0.0);
 Skipping as NO data recieved for 127.0.0.1:15
 Skipping as NO data recieved for 127.0.0.1:16
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',17,'2022-12-30 09:23:28',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',17,'2022-12-30 09:49:34',0.0,0.0,0.0,0.0,0.0,0.0);
 Skipping as NO data recieved for 127.0.0.1:18
 Skipping as NO data recieved for 127.0.0.1:19
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',20,'2022-12-30 09:23:28',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',20,'2022-12-30 09:49:34',0.0,0.0,0.0,0.0,0.0,0.0);
 Skipping as NO data recieved for 127.0.0.1:21
 Skipping as NO data recieved for 127.0.0.1:22
 Skipping as NO data recieved for 127.0.0.1:23
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',26,'2022-12-30 09:23:28',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',27,'2022-12-30 09:23:28',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',28,'2022-12-30 09:23:28',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',29,'2022-12-30 09:23:28',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',30,'2022-12-30 09:23:28',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',31,'2022-12-30 09:23:28',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',32,'2022-12-30 09:23:28',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',33,'2022-12-30 09:23:28',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',34,'2022-12-30 09:23:28',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',35,'2022-12-30 09:23:28',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',36,'2022-12-30 09:23:28',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',37,'2022-12-30 09:23:28',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',38,'2022-12-30 09:23:28',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',39,'2022-12-30 09:23:28',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',40,'2022-12-30 09:23:28',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',41,'2022-12-30 09:23:28',0.0,0.0,0.0,0.0,0.0,0.0);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',42,'2022-12-30 09:23:28',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',26,'2022-12-30 09:49:34',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',27,'2022-12-30 09:49:34',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',28,'2022-12-30 09:49:34',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',29,'2022-12-30 09:49:34',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',30,'2022-12-30 09:49:34',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',31,'2022-12-30 09:49:34',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',32,'2022-12-30 09:49:34',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',33,'2022-12-30 09:49:34',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',34,'2022-12-30 09:49:34',0.0,0.0,0.0,0.0,0.0,0.0);
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',35,'2022-12-30 09:49:34',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',36,'2022-12-30 09:49:34',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',37,'2022-12-30 09:49:34',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',38,'2022-12-30 09:49:34',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',39,'2022-12-30 09:49:34',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',40,'2022-12-30 09:49:34',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',41,'2022-12-30 09:49:34',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',42,'2022-12-30 09:49:34',0.0,0.0,0.0,0.0,0.0,0.0);
 Skipping as NO data recieved for 127.0.0.1:43
 Skipping as NO data recieved for 127.0.0.1:44
 Skipping as NO data recieved for 127.0.0.1:45
 Skipping as NO data recieved for 127.0.0.1:46
 Skipping as NO data recieved for 127.0.0.1:47
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',48,'2022-12-30 09:23:28',5.599E-4,4.9E-4,9.651E-4,8.44E-4,7.019E-4,6.138E-4);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',49,'2022-12-30 09:23:28',5.599E-4,4.9E-4,9.651E-4,8.44E-4,7.019E-4,6.138E-4);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',50,'2022-12-30 09:23:28',5.599E-4,4.9E-4,9.651E-4,8.44E-4,7.019E-4,6.138E-4);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',51,'2022-12-30 09:23:28',5.599E-4,4.9E-4,9.651E-4,8.44E-4,7.019E-4,6.138E-4);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',52,'2022-12-30 09:23:28',5.599E-4,4.9E-4,9.651E-4,8.44E-4,7.019E-4,6.138E-4);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',53,'2022-12-30 09:23:28',5.599E-4,4.9E-4,9.651E-4,8.44E-4,7.019E-4,6.138E-4);
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',54,'2022-12-30 09:23:28',5.599E-4,4.9E-4,9.651E-4,8.44E-4,7.019E-4,6.138E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',48,'2022-12-30 09:49:34',2.3E-4,2.1E-4,3.7E-4,3.309E-4,2.96E-4,2.647E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',49,'2022-12-30 09:49:34',2.3E-4,2.1E-4,3.7E-4,3.309E-4,2.96E-4,2.647E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',50,'2022-12-30 09:49:34',2.3E-4,2.1E-4,3.7E-4,3.309E-4,2.96E-4,2.647E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',51,'2022-12-30 09:49:34',2.3E-4,2.1E-4,3.7E-4,3.309E-4,2.96E-4,2.647E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',52,'2022-12-30 09:49:34',2.3E-4,2.1E-4,3.7E-4,3.309E-4,2.96E-4,2.647E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',53,'2022-12-30 09:49:34',2.3E-4,2.1E-4,3.7E-4,3.309E-4,2.96E-4,2.647E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',54,'2022-12-30 09:49:34',2.3E-4,2.1E-4,3.7E-4,3.309E-4,2.96E-4,2.647E-4);
 Skipping as NO data recieved for 127.0.0.1:55
 Skipping as NO data recieved for 127.0.0.1:56
 Skipping as NO data recieved for 127.0.0.1:57
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',25,'2022-12-30 09:23:28',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',25,'2022-12-30 09:49:34',0.0,0.0,0.0,0.0,0.0,0.0);
 Skipping as NO data recieved for 127.0.0.1:5
-INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',24,'2022-12-30 09:23:28',5.599E-4,4.9E-4,9.651E-4,8.44E-4,7.019E-4,6.138E-4);
-CLOSING
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',24,'2022-12-30 09:49:34',2.3E-4,2.1E-4,3.7E-4,3.309E-4,2.96E-4,2.647E-4);
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = update called
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = Inside repeat function
+time:40
+Connecting to database...
+END
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',6,'2022-12-30 09:49:46',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:7
+Skipping as NO data recieved for 127.0.0.1:8
+Skipping as NO data recieved for 127.0.0.1:9
+Skipping as NO data recieved for 127.0.0.1:10
+Skipping as NO data recieved for 127.0.0.1:11
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',12,'2022-12-30 09:49:46',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:13
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',14,'2022-12-30 09:49:46',0.0,0.0,0.0,3.8E-6,0.0,2.7E-6);
+Skipping as NO data recieved for 127.0.0.1:15
+Skipping as NO data recieved for 127.0.0.1:16
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',17,'2022-12-30 09:49:46',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:18
+Skipping as NO data recieved for 127.0.0.1:19
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',20,'2022-12-30 09:49:46',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:21
+Skipping as NO data recieved for 127.0.0.1:22
+Skipping as NO data recieved for 127.0.0.1:23
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',26,'2022-12-30 09:49:46',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',27,'2022-12-30 09:49:46',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',28,'2022-12-30 09:49:46',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',29,'2022-12-30 09:49:46',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',30,'2022-12-30 09:49:46',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',31,'2022-12-30 09:49:46',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',32,'2022-12-30 09:49:46',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',33,'2022-12-30 09:49:46',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',34,'2022-12-30 09:49:46',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',35,'2022-12-30 09:49:46',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',36,'2022-12-30 09:49:46',0.0,0.0,0.0,3.8E-6,0.0,2.7E-6);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',37,'2022-12-30 09:49:46',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',38,'2022-12-30 09:49:46',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',39,'2022-12-30 09:49:46',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',40,'2022-12-30 09:49:46',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',41,'2022-12-30 09:49:46',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',42,'2022-12-30 09:49:46',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:43
+Skipping as NO data recieved for 127.0.0.1:44
+Skipping as NO data recieved for 127.0.0.1:45
+Skipping as NO data recieved for 127.0.0.1:46
+Skipping as NO data recieved for 127.0.0.1:47
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',48,'2022-12-30 09:49:46',1.9E-4,2.3E-4,3.337E-4,4.043E-4,2.427E-4,2.94E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',49,'2022-12-30 09:49:46',1.9E-4,2.3E-4,3.337E-4,4.043E-4,2.427E-4,2.94E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',50,'2022-12-30 09:49:46',1.9E-4,2.3E-4,3.337E-4,4.043E-4,2.427E-4,2.94E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',51,'2022-12-30 09:49:46',1.9E-4,2.3E-4,3.337E-4,4.043E-4,2.427E-4,2.94E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',52,'2022-12-30 09:49:46',1.9E-4,2.3E-4,3.337E-4,4.043E-4,2.427E-4,2.94E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',53,'2022-12-30 09:49:46',1.9E-4,2.3E-4,3.337E-4,4.043E-4,2.427E-4,2.94E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',54,'2022-12-30 09:49:46',1.9E-4,2.3E-4,3.337E-4,4.043E-4,2.427E-4,2.94E-4);
+Skipping as NO data recieved for 127.0.0.1:55
+Skipping as NO data recieved for 127.0.0.1:56
+Skipping as NO data recieved for 127.0.0.1:57
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',25,'2022-12-30 09:49:46',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:5
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',24,'2022-12-30 09:49:46',1.9E-4,2.3E-4,3.337E-4,4.043E-4,2.427E-4,2.94E-4);
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('172.16.0.1',1,'2022-12-30 09:49:46',0.00189,0.00282,2.489E-4,3.709E-4,1.81E-4,2.698E-4);
+sending arraylist of size213
+size of records arraylist213
+found in recordstrue
+speed(kbps) is in:0.18536931818181818 outspeed 0.2762784090909091
+ found in records true
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = choice =FastEthernet0/1
+Connecting to database...
+END
+adding 172.16.0.1:3
+OID = 1.3.6.1.2.1.2.2.1.2.3
+Value = Connecting to database...
+END
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = Inside repeat function
+sending arraylist of size1
+size of records arraylist1
+speed(kbps) is in:0.0 outspeed 0.0
+ found in records false
+time:50
+Connecting to database...
+END
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',6,'2022-12-30 09:49:58',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:7
+Skipping as NO data recieved for 127.0.0.1:8
+Skipping as NO data recieved for 127.0.0.1:9
+Skipping as NO data recieved for 127.0.0.1:10
+Skipping as NO data recieved for 127.0.0.1:11
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',12,'2022-12-30 09:49:58',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:13
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',14,'2022-12-30 09:49:58',0.0,0.0,0.0,5.7E-6,0.0,4.1E-6);
+Skipping as NO data recieved for 127.0.0.1:15
+Skipping as NO data recieved for 127.0.0.1:16
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',17,'2022-12-30 09:49:58',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:18
+Skipping as NO data recieved for 127.0.0.1:19
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',20,'2022-12-30 09:49:58',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:21
+Skipping as NO data recieved for 127.0.0.1:22
+Skipping as NO data recieved for 127.0.0.1:23
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',26,'2022-12-30 09:49:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',27,'2022-12-30 09:49:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',28,'2022-12-30 09:49:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',29,'2022-12-30 09:49:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',30,'2022-12-30 09:49:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',31,'2022-12-30 09:49:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',32,'2022-12-30 09:49:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',33,'2022-12-30 09:49:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',34,'2022-12-30 09:49:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',35,'2022-12-30 09:49:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',36,'2022-12-30 09:49:58',0.0,0.0,0.0,5.7E-6,0.0,4.1E-6);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',37,'2022-12-30 09:49:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',38,'2022-12-30 09:49:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',39,'2022-12-30 09:49:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',40,'2022-12-30 09:49:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',41,'2022-12-30 09:49:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',42,'2022-12-30 09:49:58',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:43
+Skipping as NO data recieved for 127.0.0.1:44
+Skipping as NO data recieved for 127.0.0.1:45
+Skipping as NO data recieved for 127.0.0.1:46
+Skipping as NO data recieved for 127.0.0.1:47
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',48,'2022-12-30 09:49:58',2.5E-4,2.4E-4,4.405E-4,4.253E-4,3.204E-4,3.093E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',49,'2022-12-30 09:49:58',2.3E-4,2.2E-4,4.405E-4,4.253E-4,2.937E-4,2.835E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',50,'2022-12-30 09:49:58',2.3E-4,2.2E-4,4.405E-4,4.253E-4,2.937E-4,2.835E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',51,'2022-12-30 09:49:58',2.3E-4,2.2E-4,4.405E-4,4.253E-4,2.937E-4,2.835E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',52,'2022-12-30 09:49:58',2.3E-4,2.2E-4,4.405E-4,4.253E-4,2.937E-4,2.835E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',53,'2022-12-30 09:49:58',2.3E-4,2.2E-4,4.405E-4,4.253E-4,2.937E-4,2.835E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',54,'2022-12-30 09:49:58',2.3E-4,2.2E-4,4.405E-4,4.253E-4,2.937E-4,2.835E-4);
+Skipping as NO data recieved for 127.0.0.1:55
+Skipping as NO data recieved for 127.0.0.1:56
+Skipping as NO data recieved for 127.0.0.1:57
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',25,'2022-12-30 09:49:58',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:5
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',24,'2022-12-30 09:49:58',2.3E-4,2.2E-4,4.405E-4,4.253E-4,2.937E-4,2.835E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('172.16.0.1',1,'2022-12-30 09:49:58',0.03529,0.03624,0.0050487,0.0051841,0.0033658,0.0034561);
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = update called
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = Inside repeat function
+time:60
+Connecting to database...
+END
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',6,'2022-12-30 09:50:09',0.0,1.0E-5,0.0,2.57E-5,0.0,1.87E-5);
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = Skipping as NO data recieved for 127.0.0.1:7
+Skipping as NO data recieved for 127.0.0.1:8
+Skipping as NO data recieved for 127.0.0.1:9
+Skipping as NO data recieved for 127.0.0.1:10
+Skipping as NO data recieved for 127.0.0.1:11
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',12,'2022-12-30 09:50:09',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:13
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',14,'2022-12-30 09:50:09',0.0,2.0E-5,0.0,3.33E-5,0.0,2.42E-5);
+Skipping as NO data recieved for 127.0.0.1:15
+Skipping as NO data recieved for 127.0.0.1:16
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',17,'2022-12-30 09:50:09',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:18
+Skipping as NO data recieved for 127.0.0.1:19
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',20,'2022-12-30 09:50:09',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:21
+Skipping as NO data recieved for 127.0.0.1:22
+Skipping as NO data recieved for 127.0.0.1:23
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',26,'2022-12-30 09:50:09',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',27,'2022-12-30 09:50:09',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',28,'2022-12-30 09:50:09',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',29,'2022-12-30 09:50:09',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',30,'2022-12-30 09:50:09',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',31,'2022-12-30 09:50:09',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',32,'2022-12-30 09:50:09',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',33,'2022-12-30 09:50:09',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',34,'2022-12-30 09:50:09',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',35,'2022-12-30 09:50:09',0.0,1.0E-5,0.0,2.57E-5,0.0,1.87E-5);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',36,'2022-12-30 09:50:09',0.0,2.0E-5,0.0,3.33E-5,0.0,2.42E-5);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',37,'2022-12-30 09:50:09',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',38,'2022-12-30 09:50:09',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',39,'2022-12-30 09:50:09',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',40,'2022-12-30 09:50:09',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',41,'2022-12-30 09:50:09',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',42,'2022-12-30 09:50:09',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:43
+Skipping as NO data recieved for 127.0.0.1:44
+Skipping as NO data recieved for 127.0.0.1:45
+Skipping as NO data recieved for 127.0.0.1:46
+Skipping as NO data recieved for 127.0.0.1:47
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',48,'2022-12-30 09:50:09',1.8E-4,0.00139,3.185E-4,0.0023765,2.316E-4,0.0017284);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',49,'2022-12-30 09:50:09',1.8E-4,0.00139,3.185E-4,0.0023765,2.316E-4,0.0017284);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',50,'2022-12-30 09:50:09',1.8E-4,0.00139,3.185E-4,0.0023765,2.316E-4,0.0017284);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',51,'2022-12-30 09:50:09',1.8E-4,0.00139,3.185E-4,0.0023765,2.316E-4,0.0017284);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',52,'2022-12-30 09:50:09',1.8E-4,0.00139,3.185E-4,0.0023765,2.316E-4,0.0017284);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',53,'2022-12-30 09:50:09',1.8E-4,0.00139,3.185E-4,0.0023765,2.316E-4,0.0017284);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',54,'2022-12-30 09:50:09',1.8E-4,0.00139,3.185E-4,0.0023765,2.316E-4,0.0017284);
+Skipping as NO data recieved for 127.0.0.1:55
+Skipping as NO data recieved for 127.0.0.1:56
+Skipping as NO data recieved for 127.0.0.1:57
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',25,'2022-12-30 09:50:09',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:5
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',24,'2022-12-30 09:50:09',1.8E-4,0.00139,3.185E-4,0.0023765,2.316E-4,0.0017284);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('172.16.0.1',1,'2022-12-30 09:50:09',0.0757,0.07703,0.0099277,0.0101013,0.0072201,0.0073464);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('172.16.0.1',3,'2022-12-30 09:50:09',0.0,9.9E-4,0.0,1.306E-4,0.0,9.5E-5);
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = sending arraylist of size110
+size of records arraylist110
+found in recordstrue
+speed(kbps) is in:0.0 outspeed 0.09730113636363637
+ found in records true
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = ----> Trap Receiver run ... <----
+----> Bắt đầu nghe trên cổng, đợi Trap message  <----
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = Inside repeat function
+time:70
+Connecting to database...
+END
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',6,'2022-12-30 09:50:20',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:7
+Skipping as NO data recieved for 127.0.0.1:8
+Skipping as NO data recieved for 127.0.0.1:9
+Skipping as NO data recieved for 127.0.0.1:10
+Skipping as NO data recieved for 127.0.0.1:11
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',12,'2022-12-30 09:50:20',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:13
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',14,'2022-12-30 09:50:20',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:15
+Skipping as NO data recieved for 127.0.0.1:16
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',17,'2022-12-30 09:50:20',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:18
+Skipping as NO data recieved for 127.0.0.1:19
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',20,'2022-12-30 09:50:20',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:21
+Skipping as NO data recieved for 127.0.0.1:22
+Skipping as NO data recieved for 127.0.0.1:23
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',26,'2022-12-30 09:50:20',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',27,'2022-12-30 09:50:20',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',28,'2022-12-30 09:50:20',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',29,'2022-12-30 09:50:20',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',30,'2022-12-30 09:50:20',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',31,'2022-12-30 09:50:20',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',32,'2022-12-30 09:50:20',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',33,'2022-12-30 09:50:20',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',34,'2022-12-30 09:50:20',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',35,'2022-12-30 09:50:20',0.0,0.0,0.0,0.0,0.0,0.0);
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',36,'2022-12-30 09:50:20',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',37,'2022-12-30 09:50:20',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',38,'2022-12-30 09:50:20',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',39,'2022-12-30 09:50:20',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',40,'2022-12-30 09:50:20',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',41,'2022-12-30 09:50:20',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',42,'2022-12-30 09:50:20',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:43
+Skipping as NO data recieved for 127.0.0.1:44
+Skipping as NO data recieved for 127.0.0.1:45
+Skipping as NO data recieved for 127.0.0.1:46
+Skipping as NO data recieved for 127.0.0.1:47
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',48,'2022-12-30 09:50:20',2.3E-4,2.4E-4,4.062E-4,4.11E-4,2.954E-4,2.989E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',49,'2022-12-30 09:50:20',2.3E-4,2.4E-4,4.062E-4,4.11E-4,2.954E-4,2.989E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',50,'2022-12-30 09:50:20',2.3E-4,2.4E-4,4.062E-4,4.11E-4,2.954E-4,2.989E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',51,'2022-12-30 09:50:20',2.3E-4,2.4E-4,4.062E-4,4.11E-4,2.954E-4,2.989E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',52,'2022-12-30 09:50:20',2.3E-4,2.4E-4,4.062E-4,4.11E-4,2.954E-4,2.989E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',53,'2022-12-30 09:50:20',2.3E-4,2.4E-4,4.062E-4,4.11E-4,2.954E-4,2.989E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',54,'2022-12-30 09:50:20',2.3E-4,2.4E-4,4.062E-4,4.11E-4,2.954E-4,2.989E-4);
+Skipping as NO data recieved for 127.0.0.1:55
+Skipping as NO data recieved for 127.0.0.1:56
+Skipping as NO data recieved for 127.0.0.1:57
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',25,'2022-12-30 09:50:20',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:5
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',24,'2022-12-30 09:50:20',2.3E-4,2.4E-4,4.062E-4,4.11E-4,2.954E-4,2.989E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('172.16.0.1',1,'2022-12-30 09:50:20',0.07339,0.07475,0.0096244,0.0098028,0.0069996,0.0071293);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('172.16.0.1',3,'2022-12-30 09:50:21',0.0,4.3E-4,0.0,5.72E-5,0.0,4.16E-5);
+sending arraylist of size56
+size of records arraylist56
+found in recordstrue
+speed(kbps) is in:0.0 outspeed 0.04261363636363636
+ found in records true
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = ----> Bắt đầu phân tích ResponderEvent: <----
+1.3.6.1.2.1.1.3.0 = 0:32:57.29
+1.3.6.1.6.3.1.1.4.1.0 = 1.3.6.1.6.3.1.1.5.3
+1.3.6.1.2.1.2.2.1.1.3 = 3
+1.3.6.1.2.1.2.2.1.2.3 = FastEthernet0/1
+1.3.6.1.2.1.2.2.1.3.3 = 6
+1.3.6.1.4.1.9.2.2.1.1.20.3 = administratively down
+---->  Quá trình phân tích ResponderEvent đã kết thúc <----
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = sending arraylist of size1
+size of records arraylist1
+speed(kbps) is in:0.0 outspeed 0.0
+ found in records false
+Inside repeat function
+time:80
+Connecting to database...
+END
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',6,'2022-12-30 09:50:32',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:7
+Skipping as NO data recieved for 127.0.0.1:8
+Skipping as NO data recieved for 127.0.0.1:9
+Skipping as NO data recieved for 127.0.0.1:10
+Skipping as NO data recieved for 127.0.0.1:11
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',12,'2022-12-30 09:50:32',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:13
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',14,'2022-12-30 09:50:32',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:15
+Skipping as NO data recieved for 127.0.0.1:16
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',17,'2022-12-30 09:50:32',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:18
+Skipping as NO data recieved for 127.0.0.1:19
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',20,'2022-12-30 09:50:32',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:21
+Skipping as NO data recieved for 127.0.0.1:22
+Skipping as NO data recieved for 127.0.0.1:23
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',26,'2022-12-30 09:50:32',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',27,'2022-12-30 09:50:32',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',28,'2022-12-30 09:50:32',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',29,'2022-12-30 09:50:32',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',30,'2022-12-30 09:50:32',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',31,'2022-12-30 09:50:32',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',32,'2022-12-30 09:50:32',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',33,'2022-12-30 09:50:32',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',34,'2022-12-30 09:50:32',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',35,'2022-12-30 09:50:32',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',36,'2022-12-30 09:50:32',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',37,'2022-12-30 09:50:32',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',38,'2022-12-30 09:50:32',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',39,'2022-12-30 09:50:32',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',40,'2022-12-30 09:50:32',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',41,'2022-12-30 09:50:32',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',42,'2022-12-30 09:50:32',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:43
+Skipping as NO data recieved for 127.0.0.1:44
+Skipping as NO data recieved for 127.0.0.1:45
+Skipping as NO data recieved for 127.0.0.1:46
+Skipping as NO data recieved for 127.0.0.1:47
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',48,'2022-12-30 09:50:32',1.1E-4,1.299E-4,2.155E-4,2.603E-4,1.436E-4,1.735E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',49,'2022-12-30 09:50:32',1.1E-4,1.299E-4,2.155E-4,2.603E-4,1.436E-4,1.735E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',50,'2022-12-30 09:50:32',1.1E-4,1.299E-4,2.155E-4,2.603E-4,1.436E-4,1.735E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',51,'2022-12-30 09:50:32',1.1E-4,1.299E-4,2.155E-4,2.603E-4,1.436E-4,1.735E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',52,'2022-12-30 09:50:32',1.1E-4,1.299E-4,2.155E-4,2.603E-4,1.436E-4,1.735E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',53,'2022-12-30 09:50:32',1.1E-4,1.299E-4,2.155E-4,2.603E-4,1.436E-4,1.735E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',54,'2022-12-30 09:50:32',1.1E-4,1.299E-4,2.155E-4,2.603E-4,1.436E-4,1.735E-4);
+Skipping as NO data recieved for 127.0.0.1:55
+Skipping as NO data recieved for 127.0.0.1:56
+Skipping as NO data recieved for 127.0.0.1:57
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',25,'2022-12-30 09:50:33',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:5
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',24,'2022-12-30 09:50:33',1.1E-4,1.299E-4,2.155E-4,2.603E-4,1.436E-4,1.735E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('172.16.0.1',1,'2022-12-30 09:50:33',0.06959,0.07466,0.0099563,0.0106811,0.0066375,0.0071207);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('172.16.0.1',3,'2022-12-30 09:50:33',0.0,8.0E-4,0.0,1.144E-4,0.0,7.62E-5);
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = sending arraylist of size56
+size of records arraylist56
+found in recordstrue
+speed(kbps) is in:0.0 outspeed 0.078125
+ found in records true
+Inside repeat function
+time:90
+Connecting to database...
+END
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',6,'2022-12-30 09:50:44',0.0,0.0,0.0,3.8E-6,0.0,2.7E-6);
+Skipping as NO data recieved for 127.0.0.1:7
+Skipping as NO data recieved for 127.0.0.1:8
+Skipping as NO data recieved for 127.0.0.1:9
+Skipping as NO data recieved for 127.0.0.1:10
+Skipping as NO data recieved for 127.0.0.1:11
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',12,'2022-12-30 09:50:44',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:13
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',14,'2022-12-30 09:50:44',0.0,0.0,0.0,3.8E-6,0.0,2.7E-6);
+Skipping as NO data recieved for 127.0.0.1:15
+Skipping as NO data recieved for 127.0.0.1:16
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',17,'2022-12-30 09:50:44',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:18
+Skipping as NO data recieved for 127.0.0.1:19
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',20,'2022-12-30 09:50:44',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:21
+Skipping as NO data recieved for 127.0.0.1:22
+Skipping as NO data recieved for 127.0.0.1:23
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',26,'2022-12-30 09:50:44',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',27,'2022-12-30 09:50:44',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',28,'2022-12-30 09:50:44',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',29,'2022-12-30 09:50:44',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',30,'2022-12-30 09:50:44',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',31,'2022-12-30 09:50:44',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',32,'2022-12-30 09:50:44',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',33,'2022-12-30 09:50:44',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',34,'2022-12-30 09:50:44',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',35,'2022-12-30 09:50:44',0.0,0.0,0.0,3.8E-6,0.0,2.7E-6);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',36,'2022-12-30 09:50:44',0.0,0.0,0.0,3.8E-6,0.0,2.7E-6);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',37,'2022-12-30 09:50:44',0.0,0.0,0.0,0.0,0.0,0.0);
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',38,'2022-12-30 09:50:44',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',39,'2022-12-30 09:50:44',0.0,0.0,0.0,0.0,0.0,0.0);
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',40,'2022-12-30 09:50:44',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',41,'2022-12-30 09:50:44',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',42,'2022-12-30 09:50:44',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:43
+Skipping as NO data recieved for 127.0.0.1:44
+Skipping as NO data recieved for 127.0.0.1:45
+Skipping as NO data recieved for 127.0.0.1:46
+Skipping as NO data recieved for 127.0.0.1:47
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',48,'2022-12-30 09:50:44',2.599E-4,7.3E-4,4.52E-4,0.0012607,3.287E-4,9.169E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',49,'2022-12-30 09:50:44',2.599E-4,7.3E-4,4.52E-4,0.0012607,3.287E-4,9.169E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',50,'2022-12-30 09:50:44',2.599E-4,7.3E-4,4.52E-4,0.0012607,3.287E-4,9.169E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',51,'2022-12-30 09:50:44',2.599E-4,7.3E-4,4.52E-4,0.0012607,3.287E-4,9.169E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',52,'2022-12-30 09:50:44',2.599E-4,7.3E-4,4.52E-4,0.0012607,3.287E-4,9.169E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',53,'2022-12-30 09:50:44',2.599E-4,7.3E-4,4.52E-4,0.0012607,3.287E-4,9.169E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',54,'2022-12-30 09:50:44',2.599E-4,7.3E-4,4.52E-4,0.0012607,3.287E-4,9.169E-4);
+Skipping as NO data recieved for 127.0.0.1:55
+Skipping as NO data recieved for 127.0.0.1:56
+Skipping as NO data recieved for 127.0.0.1:57
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',25,'2022-12-30 09:50:44',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:5
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',24,'2022-12-30 09:50:44',2.599E-4,7.3E-4,4.52E-4,0.0012607,3.287E-4,9.169E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('172.16.0.1',1,'2022-12-30 09:50:44',0.10786,0.10975,0.0141448,0.0143918,0.0102871,0.0104668);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('172.16.0.1',3,'2022-12-30 09:50:44',0.0,0.0,0.0,0.0,0.0,0.0);
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = sending arraylist of size56
+size of records arraylist56
+found in recordstrue
+speed(kbps) is in:0.0 outspeed 0.0
+ found in records true
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = Inside repeat function
+time:100
+Connecting to database...
+END
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',6,'2022-12-30 09:50:58',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:7
+Skipping as NO data recieved for 127.0.0.1:8
+Skipping as NO data recieved for 127.0.0.1:9
+Skipping as NO data recieved for 127.0.0.1:10
+Skipping as NO data recieved for 127.0.0.1:11
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',12,'2022-12-30 09:50:58',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:13
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',14,'2022-12-30 09:50:58',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:15
+Skipping as NO data recieved for 127.0.0.1:16
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',17,'2022-12-30 09:50:58',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:18
+Skipping as NO data recieved for 127.0.0.1:19
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',20,'2022-12-30 09:50:58',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:21
+Skipping as NO data recieved for 127.0.0.1:22
+Skipping as NO data recieved for 127.0.0.1:23
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',26,'2022-12-30 09:50:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',27,'2022-12-30 09:50:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',28,'2022-12-30 09:50:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',29,'2022-12-30 09:50:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',30,'2022-12-30 09:50:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',31,'2022-12-30 09:50:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',32,'2022-12-30 09:50:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',33,'2022-12-30 09:50:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',34,'2022-12-30 09:50:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',35,'2022-12-30 09:50:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',36,'2022-12-30 09:50:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',37,'2022-12-30 09:50:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',38,'2022-12-30 09:50:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',39,'2022-12-30 09:50:58',0.0,0.0,0.0,0.0,0.0,0.0);
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',40,'2022-12-30 09:50:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',41,'2022-12-30 09:50:58',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',42,'2022-12-30 09:50:58',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:43
+Skipping as NO data recieved for 127.0.0.1:44
+Skipping as NO data recieved for 127.0.0.1:45
+Skipping as NO data recieved for 127.0.0.1:46
+Skipping as NO data recieved for 127.0.0.1:47
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',48,'2022-12-30 09:50:58',1.2E-4,1.2E-4,2.441E-4,2.489E-4,1.502E-4,1.531E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',49,'2022-12-30 09:50:58',1.2E-4,1.2E-4,2.441E-4,2.489E-4,1.502E-4,1.531E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',50,'2022-12-30 09:50:58',1.2E-4,1.2E-4,2.441E-4,2.489E-4,1.502E-4,1.531E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',51,'2022-12-30 09:50:58',1.2E-4,1.2E-4,2.441E-4,2.489E-4,1.502E-4,1.531E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',52,'2022-12-30 09:50:58',1.2E-4,1.2E-4,2.441E-4,2.489E-4,1.502E-4,1.531E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',53,'2022-12-30 09:50:58',1.2E-4,1.2E-4,2.441E-4,2.489E-4,1.502E-4,1.531E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',54,'2022-12-30 09:50:58',1.2E-4,1.2E-4,2.441E-4,2.489E-4,1.502E-4,1.531E-4);
+Skipping as NO data recieved for 127.0.0.1:55
+Skipping as NO data recieved for 127.0.0.1:56
+Skipping as NO data recieved for 127.0.0.1:57
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',25,'2022-12-30 09:50:58',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:5
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',24,'2022-12-30 09:50:58',1.2E-4,1.2E-4,2.441E-4,2.489E-4,1.502E-4,1.531E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('172.16.0.1',1,'2022-12-30 09:50:58',0.08992,0.09176,0.013936,0.0142211,0.008576,0.0087515);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('172.16.0.1',3,'2022-12-30 09:50:58',0.0,0.0,0.0,0.0,0.0,0.0);
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = sending arraylist of size56
+size of records arraylist56
+found in recordstrue
+speed(kbps) is in:0.0 outspeed 0.0
+ found in records true
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = Inside repeat function
+time:110
+Connecting to database...
+END
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',6,'2022-12-30 09:51:10',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:7
+Skipping as NO data recieved for 127.0.0.1:8
+Skipping as NO data recieved for 127.0.0.1:9
+Skipping as NO data recieved for 127.0.0.1:10
+Skipping as NO data recieved for 127.0.0.1:11
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',12,'2022-12-30 09:51:10',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:13
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',14,'2022-12-30 09:51:10',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:15
+Skipping as NO data recieved for 127.0.0.1:16
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',17,'2022-12-30 09:51:10',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:18
+Skipping as NO data recieved for 127.0.0.1:19
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',20,'2022-12-30 09:51:10',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:21
+Skipping as NO data recieved for 127.0.0.1:22
+Skipping as NO data recieved for 127.0.0.1:23
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',26,'2022-12-30 09:51:10',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',27,'2022-12-30 09:51:10',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',28,'2022-12-30 09:51:10',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',29,'2022-12-30 09:51:10',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',30,'2022-12-30 09:51:10',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',31,'2022-12-30 09:51:10',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',32,'2022-12-30 09:51:10',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',33,'2022-12-30 09:51:10',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',34,'2022-12-30 09:51:10',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',35,'2022-12-30 09:51:10',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',36,'2022-12-30 09:51:10',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',37,'2022-12-30 09:51:10',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',38,'2022-12-30 09:51:10',0.0,0.0,0.0,0.0,0.0,0.0);
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',39,'2022-12-30 09:51:10',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',40,'2022-12-30 09:51:10',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',41,'2022-12-30 09:51:10',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',42,'2022-12-30 09:51:10',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:43
+Skipping as NO data recieved for 127.0.0.1:44
+Skipping as NO data recieved for 127.0.0.1:45
+Skipping as NO data recieved for 127.0.0.1:46
+Skipping as NO data recieved for 127.0.0.1:47
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',48,'2022-12-30 09:51:10',3.5E-4,2.4E-4,6.647E-4,4.472E-4,4.431E-4,2.981E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',49,'2022-12-30 09:51:10',3.5E-4,2.4E-4,6.647E-4,4.472E-4,4.431E-4,2.981E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',50,'2022-12-30 09:51:10',3.5E-4,2.4E-4,6.647E-4,4.472E-4,4.431E-4,2.981E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',51,'2022-12-30 09:51:10',3.5E-4,2.4E-4,6.647E-4,4.472E-4,4.431E-4,2.981E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',52,'2022-12-30 09:51:10',3.5E-4,2.4E-4,6.647E-4,4.472E-4,4.431E-4,2.981E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',53,'2022-12-30 09:51:10',3.5E-4,2.4E-4,6.647E-4,4.472E-4,4.431E-4,2.981E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',54,'2022-12-30 09:51:10',3.5E-4,2.4E-4,6.647E-4,4.472E-4,4.431E-4,2.981E-4);
+Skipping as NO data recieved for 127.0.0.1:55
+Skipping as NO data recieved for 127.0.0.1:56
+Skipping as NO data recieved for 127.0.0.1:57
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',25,'2022-12-30 09:51:10',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:5
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',24,'2022-12-30 09:51:10',3.5E-4,2.4E-4,6.647E-4,4.472E-4,4.431E-4,2.981E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('172.16.0.1',1,'2022-12-30 09:51:10',0.06728,0.06852,0.0096244,0.0098028,0.0064163,0.0065352);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('172.16.0.1',3,'2022-12-30 09:51:10',0.0,0.0,0.0,0.0,0.0,0.0);
+sending arraylist of size56
+size of records arraylist56
+found in recordstrue
+speed(kbps) is in:0.0 outspeed 0.0
+ found in records true
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = Inside repeat function
+time:120
+Connecting to database...
+END
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',6,'2022-12-30 09:51:22',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:7
+Skipping as NO data recieved for 127.0.0.1:8
+Skipping as NO data recieved for 127.0.0.1:9
+Skipping as NO data recieved for 127.0.0.1:10
+Skipping as NO data recieved for 127.0.0.1:11
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',12,'2022-12-30 09:51:22',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:13
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',14,'2022-12-30 09:51:22',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:15
+Skipping as NO data recieved for 127.0.0.1:16
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',17,'2022-12-30 09:51:22',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:18
+Skipping as NO data recieved for 127.0.0.1:19
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',20,'2022-12-30 09:51:22',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:21
+Skipping as NO data recieved for 127.0.0.1:22
+Skipping as NO data recieved for 127.0.0.1:23
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',26,'2022-12-30 09:51:22',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',27,'2022-12-30 09:51:22',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',28,'2022-12-30 09:51:22',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',29,'2022-12-30 09:51:22',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',30,'2022-12-30 09:51:22',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',31,'2022-12-30 09:51:22',0.0,0.0,0.0,0.0,0.0,0.0);
+sending arraylist of size56
+size of records arraylist56
+found in recordstrue
+speed(kbps) is in:0.0 outspeed 0.0
+ found in records true
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',32,'2022-12-30 09:51:22',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',33,'2022-12-30 09:51:22',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',34,'2022-12-30 09:51:22',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',35,'2022-12-30 09:51:22',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',36,'2022-12-30 09:51:22',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',37,'2022-12-30 09:51:22',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',38,'2022-12-30 09:51:22',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',39,'2022-12-30 09:51:22',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',40,'2022-12-30 09:51:22',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',41,'2022-12-30 09:51:22',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',42,'2022-12-30 09:51:22',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:43
+Skipping as NO data recieved for 127.0.0.1:44
+Skipping as NO data recieved for 127.0.0.1:45
+Skipping as NO data recieved for 127.0.0.1:46
+Skipping as NO data recieved for 127.0.0.1:47
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',48,'2022-12-30 09:51:22',1.8E-4,1.9E-4,3.185E-4,3.28E-4,2.316E-4,2.385E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',49,'2022-12-30 09:51:22',1.8E-4,1.9E-4,3.185E-4,3.28E-4,2.316E-4,2.385E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',50,'2022-12-30 09:51:22',1.8E-4,1.9E-4,3.185E-4,3.28E-4,2.316E-4,2.385E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',51,'2022-12-30 09:51:22',1.8E-4,1.9E-4,3.185E-4,3.28E-4,2.316E-4,2.385E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',52,'2022-12-30 09:51:22',1.8E-4,1.9E-4,3.185E-4,3.28E-4,2.316E-4,2.385E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',53,'2022-12-30 09:51:22',1.8E-4,1.9E-4,3.185E-4,3.28E-4,2.316E-4,2.385E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',54,'2022-12-30 09:51:22',1.8E-4,1.9E-4,3.185E-4,3.28E-4,2.316E-4,2.385E-4);
+Skipping as NO data recieved for 127.0.0.1:55
+Skipping as NO data recieved for 127.0.0.1:56
+Skipping as NO data recieved for 127.0.0.1:57
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',25,'2022-12-30 09:51:22',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:5
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',24,'2022-12-30 09:51:22',1.8E-4,1.9E-4,3.185E-4,3.28E-4,2.316E-4,2.385E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('172.16.0.1',1,'2022-12-30 09:51:22',0.0737,0.07519,0.0096645,0.00986,0.0070287,0.0071709);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('172.16.0.1',3,'2022-12-30 09:51:22',0.0,0.0,0.0,0.0,0.0,0.0);
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = update called
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = Inside repeat function
+time:130
+Connecting to database...
+END
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',6,'2022-12-30 09:51:33',0.0,0.0,0.0,0.0,0.0,0.0);
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = Skipping as NO data recieved for 127.0.0.1:7
+Skipping as NO data recieved for 127.0.0.1:8
+Skipping as NO data recieved for 127.0.0.1:9
+Skipping as NO data recieved for 127.0.0.1:10
+Skipping as NO data recieved for 127.0.0.1:11
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',12,'2022-12-30 09:51:33',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:13
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',14,'2022-12-30 09:51:33',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:15
+Skipping as NO data recieved for 127.0.0.1:16
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',17,'2022-12-30 09:51:33',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:18
+Skipping as NO data recieved for 127.0.0.1:19
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',20,'2022-12-30 09:51:33',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:21
+Skipping as NO data recieved for 127.0.0.1:22
+Skipping as NO data recieved for 127.0.0.1:23
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',26,'2022-12-30 09:51:33',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',27,'2022-12-30 09:51:33',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',28,'2022-12-30 09:51:33',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',29,'2022-12-30 09:51:33',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',30,'2022-12-30 09:51:33',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',31,'2022-12-30 09:51:33',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',32,'2022-12-30 09:51:33',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',33,'2022-12-30 09:51:33',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',34,'2022-12-30 09:51:33',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',35,'2022-12-30 09:51:33',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',36,'2022-12-30 09:51:33',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',37,'2022-12-30 09:51:33',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',38,'2022-12-30 09:51:33',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',39,'2022-12-30 09:51:33',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',40,'2022-12-30 09:51:33',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',41,'2022-12-30 09:51:33',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',42,'2022-12-30 09:51:33',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:43
+Skipping as NO data recieved for 127.0.0.1:44
+Skipping as NO data recieved for 127.0.0.1:45
+Skipping as NO data recieved for 127.0.0.1:46
+Skipping as NO data recieved for 127.0.0.1:47
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',48,'2022-12-30 09:51:33',4.1E-4,4.4E-4,7.038E-4,7.534E-4,5.118E-4,5.479E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',49,'2022-12-30 09:51:33',4.1E-4,4.4E-4,7.038E-4,7.534E-4,5.118E-4,5.479E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',50,'2022-12-30 09:51:33',4.1E-4,4.4E-4,7.038E-4,7.534E-4,5.118E-4,5.479E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',51,'2022-12-30 09:51:33',4.1E-4,4.4E-4,7.038E-4,7.534E-4,5.118E-4,5.479E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',52,'2022-12-30 09:51:33',4.1E-4,4.4E-4,7.038E-4,7.534E-4,5.118E-4,5.479E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',53,'2022-12-30 09:51:33',4.1E-4,4.4E-4,7.038E-4,7.534E-4,5.118E-4,5.479E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',54,'2022-12-30 09:51:33',4.1E-4,4.4E-4,7.038E-4,7.534E-4,5.118E-4,5.479E-4);
+Skipping as NO data recieved for 127.0.0.1:55
+Skipping as NO data recieved for 127.0.0.1:56
+Skipping as NO data recieved for 127.0.0.1:57
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',25,'2022-12-30 09:51:33',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:5
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',24,'2022-12-30 09:51:33',4.1E-4,4.4E-4,7.038E-4,7.534E-4,5.118E-4,5.479E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('172.16.0.1',1,'2022-12-30 09:51:33',0.07338,0.0772999,0.0096235,0.0101375,0.0069989,0.0073727);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('172.16.0.1',3,'2022-12-30 09:51:33',0.0,0.0,0.0,0.0,0.0,0.0);
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = sending arraylist of size56
+size of records arraylist56
+found in recordstrue
+speed(kbps) is in:7.166903409090909 outspeed 7.549715909090909
+ found in records true
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = OID = 1.3.6.1.2.1.25.2.2.0
+Value = Inside repeat function
+time:140
+Connecting to database...
+END
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',6,'2022-12-30 09:51:44',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:7
+Skipping as NO data recieved for 127.0.0.1:8
+Skipping as NO data recieved for 127.0.0.1:9
+Skipping as NO data recieved for 127.0.0.1:10
+Skipping as NO data recieved for 127.0.0.1:11
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',12,'2022-12-30 09:51:44',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:13
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',14,'2022-12-30 09:51:44',0.0,0.0,0.0,3.8E-6,0.0,2.7E-6);
+Skipping as NO data recieved for 127.0.0.1:15
+Skipping as NO data recieved for 127.0.0.1:16
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',17,'2022-12-30 09:51:44',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:18
+Skipping as NO data recieved for 127.0.0.1:19
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',20,'2022-12-30 09:51:44',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:21
+Skipping as NO data recieved for 127.0.0.1:22
+Skipping as NO data recieved for 127.0.0.1:23
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',26,'2022-12-30 09:51:44',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',27,'2022-12-30 09:51:44',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',28,'2022-12-30 09:51:44',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',29,'2022-12-30 09:51:44',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',30,'2022-12-30 09:51:44',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',31,'2022-12-30 09:51:44',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',32,'2022-12-30 09:51:44',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',33,'2022-12-30 09:51:44',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',34,'2022-12-30 09:51:44',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',35,'2022-12-30 09:51:44',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',36,'2022-12-30 09:51:44',0.0,0.0,0.0,3.8E-6,0.0,2.7E-6);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',37,'2022-12-30 09:51:44',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',38,'2022-12-30 09:51:44',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',39,'2022-12-30 09:51:44',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',40,'2022-12-30 09:51:44',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',41,'2022-12-30 09:51:44',0.0,0.0,0.0,0.0,0.0,0.0);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',42,'2022-12-30 09:51:44',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:43
+Skipping as NO data recieved for 127.0.0.1:44
+Skipping as NO data recieved for 127.0.0.1:45
+Skipping as NO data recieved for 127.0.0.1:46
+Skipping as NO data recieved for 127.0.0.1:47
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',48,'2022-12-30 09:51:44',2.1E-4,2.1E-4,3.662E-4,3.709E-4,2.663E-4,2.698E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',49,'2022-12-30 09:51:44',2.1E-4,2.1E-4,3.662E-4,3.709E-4,2.663E-4,2.698E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',50,'2022-12-30 09:51:44',2.1E-4,2.1E-4,3.662E-4,3.709E-4,2.663E-4,2.698E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',51,'2022-12-30 09:51:44',2.1E-4,2.1E-4,3.662E-4,3.709E-4,2.663E-4,2.698E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',52,'2022-12-30 09:51:44',2.1E-4,2.1E-4,3.662E-4,3.709E-4,2.663E-4,2.698E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',53,'2022-12-30 09:51:44',2.1E-4,2.1E-4,3.662E-4,3.709E-4,2.663E-4,2.698E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',54,'2022-12-30 09:51:44',2.1E-4,2.1E-4,3.662E-4,3.709E-4,2.663E-4,2.698E-4);
+Skipping as NO data recieved for 127.0.0.1:55
+Skipping as NO data recieved for 127.0.0.1:56
+Skipping as NO data recieved for 127.0.0.1:57
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',25,'2022-12-30 09:51:44',0.0,0.0,0.0,0.0,0.0,0.0);
+Skipping as NO data recieved for 127.0.0.1:5
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('127.0.0.1',24,'2022-12-30 09:51:44',2.1E-4,2.1E-4,3.662E-4,3.709E-4,2.663E-4,2.698E-4);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('172.16.0.1',1,'2022-12-30 09:51:44',0.07338,0.07474,0.0096235,0.0098018,0.0069989,0.0071286);
+INSERT INTO network_devices_manager.recorded_data(ip,port,record_date,inbw,outbw,datain,dataout,indatarate,outdatarate) VALUES('172.16.0.1',3,'2022-12-30 09:51:44',0.0,0.0,0.0,0.0,0.0,0.0);
+OID = 1.3.6.1.2.1.25.2.2.0
+Value = CLOSING
 shutting down
 Exiting normally...

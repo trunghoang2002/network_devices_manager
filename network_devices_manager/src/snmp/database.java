@@ -598,11 +598,12 @@ public class database {
             String community = d.getCommunity();
             String sysname = d.getSysname();
             String sysdescr = d.getSysdescr();
+            if (sysdescr.length() > 100) sysdescr = sysdescr.substring(0, 100) + "...";
             String sysuptime = d.getSysuptime();
             int ifnumber = d.getIfnumber();
             String sql="INSERT INTO  "+database_name+"."+tablename_devices+" VALUES('"+ip+"','"+community+"','"+sysname+"','"+sysdescr+"','"+sysuptime+"',"+ifnumber+");";
         
-            stmt.executeUpdate(sql); 
+            stmt.executeUpdate(sql);
             stmt.close();
             conn.close();
         } 
