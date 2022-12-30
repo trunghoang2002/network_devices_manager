@@ -1592,8 +1592,7 @@ public class Gui_fxmlController {
             String SQL = "select R.ip,user_description,snmp_description,"
                     + "avg(R.inbw) as inbw,avg(outbw) as outbw,sum(datain) as datain,sum(dataout) as dataout,D.device_speed as speed ,avg(indatarate) as indatarate,avg(outdatarate) as outdatarate"
                     +" from "+database.database_name+"."+database.tablename_records+" R INNER JOIN "+database.database_name+"."+database.tablename_interfaces+" D ON R.port=D.device_port and R.ip=D.device_ip" + where_clause1 + " group by R.port,R.ip ;";
-            System.out.println("the SQL is ");
-            System.out.println(SQL);
+            System.out.println("the SQL is \n"+ SQL);
             gui_model_record.recordData.clear();
             gui_model_record.recordData.addAll(database.get_data(SQL));
             if(gui_model_record.recordData.isEmpty()){

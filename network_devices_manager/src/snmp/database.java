@@ -256,8 +256,7 @@ public class database {
          String sql="select max(record_date) as max,min(record_date) as min from "+database_name+"."+tablename_records+";";
          
          ResultSet rs = stmt.executeQuery(sql);
-        
-        while(rs.next()){
+	     while(rs.next()){
            //start 
            String min = rs.getString("min");
            //end
@@ -266,14 +265,10 @@ public class database {
            dates[1]=max;
             System.out.println("inside database"+dates[0]+"max"+dates[1]);
         }
-        
         rs.close();
         stmt.close();
         conn.close();
-
-//end
-         
-     } 
+     }
      catch (SQLException ex) {
          Logger.getLogger(database.class.getName()).log(Level.SEVERE, null, ex);
      }
@@ -306,7 +301,6 @@ public class database {
                 System.out.println(""+sql);
             stmt.executeUpdate(sql);   
          }
-         
      } 
      catch (SQLException ex) {
          Logger.getLogger(database.class.getName()).log(Level.SEVERE, null, ex);

@@ -308,7 +308,7 @@ public class Datacollector {
                 //System.out.println("delta inoctets= "+delta_inoctets+" delta_outoctets "+delta_outoctets);
                 //System.out.println("delta_seconds= "+delta_seconds);
                 
-                data[p][i%size_record_queue].data_in_mb=((double)delta_inoctets)/(1024*1024); 
+                data[p][i%size_record_queue].data_in_mb=((double)delta_inoctets)/(1024*1024);
                 data[p][i%size_record_queue].data_out_mb=((double)delta_outoctets)/(1024*1024);
                 data[p][i%size_record_queue].data_datarate_in_mbps=(data[p][i%size_record_queue].data_in_mb/(double)delta_seconds)*8;
                 data[p][i%size_record_queue].data_datarate_out_mbps=(data[p][i%size_record_queue].data_out_mb/(double)delta_seconds)*8;
@@ -572,7 +572,6 @@ public class Datacollector {
                     catch (Exception ex) {
                         gui_javafx.pst.println("Error in calc_bandwidth  Datacollector.repeatfunction()");
                         ex.printStackTrace(gui_javafx.pst);
-
                     }
                 }
 
@@ -585,6 +584,7 @@ public class Datacollector {
                                 System.out.println("NO DATA ( NULL )TO BE INSERTED IN DATABASE");
                             }
                             else{
+                            	// add data into table recorded_data
                                 database.insert_data(data);
                             }
                         }
